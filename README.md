@@ -78,39 +78,41 @@ insert into user value(id,"用户昵称","用户账号",
 
 ## 3,功能
 
+网页图片显示不出来！效果图片在images目录
+
 ### 3.1 后台管理
 
 #### 登录界面
 
 后台管理页面的账号验证使用拦截器通过session完成验证。存入数据库的用户密码用一个MD5工具进行了转换，防止明文存放密码。登录成功会在整个后台的页面右上角，展示登录账号的头像。可以通过点击头像完成账号的退出。
 
-![1673615890700](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673615890700.png?token=GHSAT0AAAAAAB5N7N57A2XTSFPDAZ2ITWPKY6BNNGQ)
+![1673615890700](/images/1673615890700.png)
 
 登录成功界面
 
-![1673615923415](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673615923415.png?token=GHSAT0AAAAAAB5N7N574VUKKJEFNT5S5NM4Y6BNQRA)
+![1673615923415](/images/1673615923415.png)
 
 退出登录
 
-![1673616662882](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673616662882.png?token=GHSAT0AAAAAAB5N7N57XWSZFYJIDUNP2QPQY6BNSKQ)
+![1673616662882](/images/1673616662882.png)
 
 #### 博客管理界面
 
 博主管理博客的页面，展示博客一些关键的属性。可以进行博客搜索，博客编辑，修改，添加。
 
-![1673616271606](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673616271606.png?token=GHSAT0AAAAAAB5N7N56SIYGYRVW6S6TUBWSY6BNS3A)
+![1673616271606](/images/1673616271606.png)
 
 #### 分类管理管理
 
 对分类进行查看，对分类进行编辑，删除，添加等功能。
 
-![1673616377660](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673616377660.png?token=GHSAT0AAAAAAB5N7N56PZG6KD3L6K2DZ4GMY6BNTSA)
+![1673616377660](/images/1673616377660.png)
 
 #### 标签管理界面
 
 管理标签，对标签的增删改查功能。
 
-![1673616516863](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673616662882.png?token=GHSAT0AAAAAAB5N7N56UWLVGVSQ6MNIHO6WY6BNUIQ)
+![1673616516863](/images/1673616662882.png)
 
 ### 3.2 前台
 
@@ -118,31 +120,31 @@ insert into user value(id,"用户昵称","用户账号",
 
 查看最新推荐的10篇博客
 
-![1673616865846](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673616865846.png?token=GHSAT0AAAAAAB5N7N56VBED6YJIQF6PWZTWY6BNWSA)
+![1673616865846](/images/1673616865846.png)
 
 #### 分类
 
 按照分类查看博客
 
-![1673616889186](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673616889186.png?token=GHSAT0AAAAAAB5N7N56YZMDSYLN22XRXT5UY6BNXCA)
+![1673616889186](/images/1673616889186.png)
 
 #### 标签
 
 按照标签查看博客
 
-![1673616937499](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673616662882.png?token=GHSAT0AAAAAAB5N7N56HTOWBKTI5LGAETF6Y6BNXXA)
+![1673616937499](/images/1673616662882.png)
 
 #### 归档
 
 按照年份统计博客
 
-![1673616963704](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673616963704.png?token=GHSAT0AAAAAAB5N7N56LRH6OZDSNNIHWVZYY6BNYFA)
+![1673616963704](/images/1673616963704.png)
 
 #### 关于我
 
 自我介绍页面
 
-![1673616987064](https://raw.githubusercontent.com/Ekkoc2021/myblog/master/images/1673616987064.png?token=GHSAT0AAAAAAB5N7N57LBWVE35M7XSLX3U4Y6BNYTA)
+![1673616987064](/images/1673616987064.png)
 
 
 
