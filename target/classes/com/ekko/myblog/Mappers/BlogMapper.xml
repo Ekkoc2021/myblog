@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ekko.myblog.Mappers.BlogMapper">
+    <insert id="insertBlog">
+        insert into blog(description,flag,updateTime,views,id,title,content,firstPicture,
+                          appreciation,shareStatement,
+                          commentabled,published,recommend,
+                          createTime,typename,userid)
+                          value(#{blog.description},#{blog.flag},#{blog.updateTime},#{blog.views},#{blog.id},#{blog.title},#{blog.content},#{blog.firstPicture},
+                            #{blog.appreciation},#{blog.shareStatement},
+                    #{blog.commentabled},#{blog.published},#{blog.recommend},
+            #{blog.createTime},#{blog.typename},#{blog.userId})
+    </insert>
+    <update id="updateBlog">
+        update blog set description=#{blog.description},flag=#{blog.flag},updateTime=#{blog.updateTime},title=#{blog.title},content=#{blog.content},firstPicture=#{blog.firstPicture},
+                        appreciation= #{blog.appreciation},shareStatement=#{blog.shareStatement},
+                        commentabled=#{blog.commentabled},published=#{blog.published},recommend=#{blog.recommend}
+                       ,typename=#{blog.typename}
+        where id=#{blog.id};
+    </update>
+    <update id="updateBlogView">
+        update blog set views=views+1 where id=#{id}
+    </update>
+    <update id="updateBlogsTypename">
+        update blog set typename=#{newname} where typename=#{oldname}
+    </update>
+    <delete id="deleteBlogById">
+        delete from blog where id=#{id};
+    </delete>
+    <select id="selectAllBlogs" resultType="com.ekko.myblog.pojo.Blog">
+        select * from blog where userid=#{BlogQuery.userid}
+    <if test="BlogQuery.title!=null"> and title like concat('%',#{BlogQuery.title},'%')</if>
+    <if test="BlogQuery.typeName!=null"> and typename like concat('%',#{BlogQuery.typeName},'%')</if>
+    <if test="BlogQuery.recommend!=null"> and recommend =#{BlogQuery.recommend}</if>
+    </select>
+
+    <resultMap id="blogMapping" type="com.ekko.myblog.pojo.Blog">
+        <id property="id" column="id"></id>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="firstPicture" column="firstPicture"/>
+        <result property="flag" column="flag"/>
+        <result property="views" column="views"/>
+        <result property="appreciation" column="appreciation"/>
+        <result property="shareStatement" column="shareStatement"/>
+        <result property="commentabled" column="commentabled"/>
+        <result property="published" column="published"/>
+        <result property="recommend" column="recommend"/>
+        <result property="createTime" column="createTime"/>
+        <result property="updateTime" column="updateTime"/>
+        <result property="userId" column="userId"/>
+        <result property="typename" column="typename"/>
+        <result property="description" column="description"/>
+       <collection property="tags" ofType="com.ekko.myblog.pojo.Tag">
+           <id property="id" column="tid"></id>
+           <result property="name" column="tname"></result>
+       </collection>
+    </resultMap>
+    <!--这种sql查询的结果中,当一个博客没有任何标签时就不会查询该博客到结果,我直接不用,反正不考虑效率,分两次查询-->
+    <select id="selectBlogByid2" resultMap="blogMapping">
+        select blog.*,tag.id as tid,tag.name as tname from blog,tag,blog_tag where blog.id = #{id} and blog.id=blog_tag.blogid and blog_tag.tagid=tag.id
+    </select>
+    <select id="selectBlogByid" resultType="com.ekko.myblog.pojo.Blog">
+        select * from blog where blog.id = #{id}
+    </select>
+
+    <select id="selectPulbishedBlogs" resultType="com.ekko.myblog.pojo.Blog">
+        select * from blog  where published=true order by updateTime desc
+    </select>
+    <select id="selectRecom" resultType="com.ekko.myblog.pojo.Blog">
+        select * from blog where recommend=true order by updateTime desc
+    </select>
+    <select id="selectBlogBySearch" resultType="com.ekko.myblog.pojo.Blog">
+        select * from blog where title  like concat('%',#{search},'%') or typename like concat('%',#{search},'%')
+                              or  content  like concat('%',#{search},'%')
+    </select>
+    <select id="selectBlogByTypeId" resultType="com.ekko.myblog.pojo.Blog">
+        select blog.* from blog,type where blog.typename=type.name and type.id=#{id} and blog.published=true
+    </select>
+    <select id="selectBlogByTagId" resultType="com.ekko.myblog.pojo.Blog">
+        select blog.* from blog,blog_tag where blog.id=blog_tag.blogid and blog_tag.tagid=#{tagid} and published=true
+    </select>
+    <select id="selectBlogYears" resultType="java.lang.String">
+        select date_format(blog.createTime,'%Y') as year from blog  group by year order by year desc
+    </select>
+    <select id="selectBlogByYear" resultType="com.ekko.myblog.pojo.Blog">
+        select blog.createTime,blog.title,blog.updateTime,blog.id,blog.flag from blog where date_format(blog.createTime,'%Y') =#{year} and  published=true order by updateTime desc
+    </select>
+    <select id="selectBlogCount" resultType="java.lang.Integer">
+        select count(*) from blog
+    </select>
+
+
+</mapper>
