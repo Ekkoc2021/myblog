@@ -1,0 +1,20 @@
+#数据源
+spring:
+  datasource:
+    druid:
+      driver-class-name:  com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/blog?characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: qwe456654.
+mybatis:
+  type-aliases-package: com/ekko/myblog/pojo
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    root: info
+    com.ekko.myblog: debug
+  file:
+    name: log/blog-dev.log
+server:
+  port: 8080
