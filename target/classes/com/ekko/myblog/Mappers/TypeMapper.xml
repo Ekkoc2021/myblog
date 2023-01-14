@@ -19,7 +19,7 @@
         select * from type where id = #{id}
     </select>
     <select id="getTypeAndSize" resultType="com.ekko.myblog.pojo.Type">
-        select type.*,count(type.name) as blogsize from type right join blog on type.name=blog.typename group by type.name order by blogsize desc
+        select type.*,count(type.name) as blogsize from type right join blog on type.name=blog.typename  group by type.name  having blogsize>0 order by blogsize desc
     </select>
 
     <update id="updateTypeName">
