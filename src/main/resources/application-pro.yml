@@ -4,10 +4,10 @@ spring:
   datasource:
     druid:
       driver-class-name:  com.mysql.cj.jdbc.Driver
-      #url: jdbc:mysql://47.100.220.147:3306/blog?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8&autoReconnect=true
-      url: jdbc:mysql://47.100.220.147:3306/blog?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      #url: jdbc:mysql://localhost:3306/blog?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8&autoReconnect=true
+      url: jdbc:mysql://localhost/blog?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
       username: root
-      password: asd456654.
+      password: 123
 mybatis:
   type-aliases-package: com/ekko/myblog/pojo
   configuration:
