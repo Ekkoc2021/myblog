@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c113fd4f-a9ad-405b-9e98-1ffe6838b4b9" name="Changes" comment="" />
+    <list default="true" id="c113fd4f-a9ad-405b-9e98-1ffe6838b4b9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ekko/myblog/Mappers/TypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ekko/myblog/Mappers/TypeMapper.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -254,6 +256,7 @@
       <workItem from="1673621780860" duration="185000" />
       <workItem from="1673621982103" duration="1033000" />
       <workItem from="1673623122725" duration="100000" />
+      <workItem from="1673693572998" duration="263000" />
     </task>
     <task id="LOCAL-00001" summary="blog">
       <created>1673618556433</created>
