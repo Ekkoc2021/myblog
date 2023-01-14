@@ -1,6 +1,0 @@
-
-spring:
-  profiles:
-    active: pro
-  thymeleaf:
-    mode: HTML
