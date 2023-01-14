@@ -1,10 +1,7 @@
 package com.ekko.myblog.controller.adminController;
 
 import com.ekko.myblog.pojo.*;
-import com.ekko.myblog.service.BlogService;
-import com.ekko.myblog.service.BlogTagService;
-import com.ekko.myblog.service.TagService;
-import com.ekko.myblog.service.TypeService;
+import com.ekko.myblog.service.*;
 import com.ekko.myblog.util.Converter;
 import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.annotations.Param;
@@ -27,6 +24,17 @@ public class BlogController {
     BlogService blogService;
     @Autowired
     TypeService typeService;
+    @Autowired
+    UserService userService;
+    @GetMapping("/blog/{id}")
+    public String blogDetail(@PathVariable Long id, Model model){
+        Blog blog = blogService.getBlogAndConvert(id);
+        userService.setBlogUser(blog);
+        blog.setTags(tagService.getTagsByBlogId(blog.getId()));
+        model.addAttribute("blog",blog);
+        return "admin/blog";
+    }
+
     @GetMapping({"/blogs"})
     public String myblogs(BlogQuery blogQuery, Model model, HttpSession session){
         blogQuery.reSet();
