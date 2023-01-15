@@ -73,8 +73,8 @@
         select * from blog where recommend=true and published=true order by updateTime desc
     </select>
     <select id="selectBlogBySearch" resultType="com.ekko.myblog.pojo.Blog">
-        select * from blog where title  like concat('%',#{search},'%') or typename like concat('%',#{search},'%')
-                              or  content  like concat('%',#{search},'%')
+        select * from blog where (title  like concat('%',#{search},'%') or typename like concat('%',#{search},'%')
+                              or  content  like concat('%',#{search},'%') )and published=true
     </select>
     <select id="selectBlogByTypeId" resultType="com.ekko.myblog.pojo.Blog">
         select blog.* from blog,type where blog.typename=type.name and type.id=#{id} and blog.published=true
