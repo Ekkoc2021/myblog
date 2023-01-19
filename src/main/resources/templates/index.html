@@ -14,7 +14,7 @@
   <nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
     <div class="ui container">
       <div class="ui inverted secondary stackable menu">
-        <h2 class="ui teal header item">Blog</h2>
+        <h2 class="ui blue header item">Blog</h2>
         <a href="#" class=" m-item item m-mobile-hide"><i class=" home icon"></i> 首页</a>
         <a href="#" class="m-item item m-mobile-hide"><i class=" idea icon"></i> 分类</a>
         <a href="#" class="m-item item m-mobile-hide"><i class=" tags icon"></i> 标签</a>
@@ -43,7 +43,7 @@
           <div class="ui top attached segment">
             <div class="ui middle aligned two column grid">
               <div class="column">
-                <h3 class="ui teal header">文章</h3>
+                <h3 class="ui blue header">文章</h3>
               </div>
               <div class="right aligned column">
                 共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.getTotal()}"> 14 </h2> 篇
@@ -75,7 +75,7 @@
                         </div>
                       </div>
                       <div class="right aligned five wide column">
-                        <div target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.typename}">认知升级</div>
+                        <div target="_blank" class="ui blue basic label m-padded-tiny m-text-thin" th:text="${blog.typename}">认知升级</div>
                       </div>
                     </div>
                     <div class="row">
@@ -100,10 +100,10 @@
           <div class="ui bottom attached segment" th:if="${page.getPages}>1">
             <div class="ui middle aligned two column grid">
               <div class="column">
-                <a href="#" th:href="@{/index/{page}(page=${page.getPageNum()}-1)}"  th:unless="${page.isIsFirstPage()}" class="ui mini teal basic button">上一页</a>
+                <a href="#" th:href="@{/index/{page}(page=${page.getPageNum()}-1)}"  th:unless="${page.isIsFirstPage()}" class="ui mini blue basic button">上一页</a>
               </div>
               <div class="right aligned column">
-                <a href="#" th:href="@{/index/{page}(page=${page.getPageNum()}+1)}"  th:unless="${page.isIsLastPage()}" class="ui mini teal basic button">下一页</a>
+                <a href="#" th:href="@{/index/{page}(page=${page.getPageNum()}+1)}"  th:unless="${page.isIsLastPage()}" class="ui mini blue basic button">下一页</a>
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@
               </div>
             </div>
  <!--                展示部分的标签-->
-            <div class="ui teal segment">
+            <div class="ui blue segment">
               <div class="ui fluid vertical menu" >
                 <a href="#"
                    th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item"
@@ -136,7 +136,7 @@
                   <span
                           th:text="${type.name}">学习日志</span>
 <!--                文章数量-->
-                  <div class="ui teal basic left pointing label"
+                  <div class="ui blue basic left pointing label"
                        th:text="${type.blogsize}">13</div>
                 </a>
 
@@ -157,9 +157,9 @@
                 </div>
               </div>
             </div>
-            <div class="ui teal segment">
+            <div class="ui blue segment">
               <a href="#" th:href="@{/tags/{id}(id=${tag.id})}"
-                 target="_blank" class="ui teal basic left pointing label m-margin-tb-tiny"
+                 target="_blank" class="ui blue basic left pointing label m-margin-tb-tiny"
                  th:each="tag : ${tags.getList()}">
                 <span th:text="${tag.name}">方法论</span>
                 <div class="detail" th:text="${tag.blogsize}">23</div>

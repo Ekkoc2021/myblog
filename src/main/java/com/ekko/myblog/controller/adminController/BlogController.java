@@ -4,7 +4,6 @@ import com.ekko.myblog.pojo.*;
 import com.ekko.myblog.service.*;
 import com.ekko.myblog.util.Converter;
 import com.github.pagehelper.PageInfo;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -93,8 +92,7 @@ public class BlogController {
     BlogTagService blogTagService;
     @PostMapping("/blogs")
     @Transactional //这里是必须要用事务的,涉及了两个表的添加使用
-    public String addPost(Blog blog, RedirectAttributes redirectAttributes, HttpSession session){
-        System.out.println(blog);
+    public String addBlog(Blog blog, RedirectAttributes redirectAttributes, HttpSession session){
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         if(blog.getId()==null) {
             //由于添加和修改共用一个界面,同时使用一个表单提交的url
@@ -153,4 +151,5 @@ public class BlogController {
         redirectAttributes.addFlashAttribute("message","删除成功!");
         return "redirect:/admin/blogs";//重定向到blogs页面
     }
+
 }

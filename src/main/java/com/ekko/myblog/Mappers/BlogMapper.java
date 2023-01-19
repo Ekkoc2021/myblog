@@ -40,4 +40,6 @@ public interface BlogMapper {
     int selectBlogCount();
 
     void updateBlogsTypename(@Param("oldname") String oldname, @Param("newname")String newname);
+
+    List<Blog> selectDiary();
 }

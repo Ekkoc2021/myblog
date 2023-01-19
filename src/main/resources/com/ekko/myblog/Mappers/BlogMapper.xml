@@ -34,6 +34,7 @@
     <if test="BlogQuery.title!=null"> and title like concat('%',#{BlogQuery.title},'%')</if>
     <if test="BlogQuery.typeName!=null"> and typename like concat('%',#{BlogQuery.typeName},'%')</if>
     <if test="BlogQuery.recommend!=null"> and recommend =#{BlogQuery.recommend}</if>
+        order by updateTime desc
     </select>
 
     <resultMap id="blogMapping" type="com.ekko.myblog.pojo.Blog">
@@ -90,6 +91,9 @@
     </select>
     <select id="selectBlogCount" resultType="java.lang.Integer">
         select count(*) from blog
+    </select>
+    <select id="selectDiary" resultType="com.ekko.myblog.pojo.Blog">
+        select * from blog where typename="日记" order by createTime desc
     </select>
 
 

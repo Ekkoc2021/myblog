@@ -13,7 +13,7 @@
   <nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
     <div class="ui container">
       <div class="ui inverted secondary stackable menu">
-        <h2 class="ui teal header item">Blog</h2>
+        <h2 class="ui blue header item">Blog</h2>
         <a href="#" class=" m-item item m-mobile-hide"><i class="mini home icon"></i>首页</a>
         <a href="#" class="m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
         <a href="#" class="active m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
@@ -39,7 +39,7 @@
       <div class="ui top attached segment">
         <div class="ui middle aligned two column grid">
           <div class="column">
-            <h3 class="ui teal header">搜索结果</h3>
+            <h3 class="ui blue header">搜索结果</h3>
           </div>
           <div class="right aligned column">
             共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.getTotal()}"> 14 </h2> 个
@@ -49,7 +49,7 @@
 
 
 
-      <div class="ui top attached teal segment">
+      <div class="ui top attached blue segment">
         <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.getList()}">
           <div class="ui middle aligned mobile reversed stackable grid" >
             <div class="eleven wide column">
@@ -71,7 +71,7 @@
                   </div>
                 </div>
                 <div class="right aligned five wide column">
-                  <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.typename}"  th:href="@{types/{name}(name=${blog.typename})}">认知升级</a>
+                  <a href="#" target="_blank" class="ui blue basic label m-padded-tiny m-text-thin" th:text="${blog.typename}"  th:href="@{types/{name}(name=${blog.typename})}">认知升级</a>
                 </div>
               </div>
             </div>
@@ -90,10 +90,10 @@
       <div class="ui bottom attached segment" th:if="${page.getPages()}>1">
         <div class="ui middle aligned two column grid">
           <div class="column">
-            <a href="#" th:href="@{/search/{que}(que=${query})}+@{/{pagenum}(pagenum=${page.getPageNum()}-1)}"  th:unless="${page.isIsFirstPage()}" class="ui mini teal basic button">上一页</a>
+            <a href="#" th:href="@{/search/{que}(que=${query})}+@{/{pagenum}(pagenum=${page.getPageNum()}-1)}"  th:unless="${page.isIsFirstPage()}" class="ui mini blue basic button">上一页</a>
           </div>
           <div class="right aligned column">
-            <a href="#" th:href="@{/search/{que}(que=${query})}+@{/{pagenum}(pagenum=${page.getPageNum()}+1)}"  th:unless="${page.isIsLastPage()}" class="ui mini teal basic button">下一页</a>
+            <a href="#" th:href="@{/search/{que}(que=${query})}+@{/{pagenum}(pagenum=${page.getPageNum()}+1)}"  th:unless="${page.isIsLastPage()}" class="ui mini blue basic button">下一页</a>
           </div>
         </div>
       </div>

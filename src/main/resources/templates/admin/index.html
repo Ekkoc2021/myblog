@@ -13,7 +13,7 @@
   <nav th:replace="admin/_fragments :: menu(0)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
     <div class="ui container">
       <div class="ui inverted secondary stackable menu">
-        <h2 class="ui teal header item">管理后台</h2>
+        <h2 class="ui blue header item">管理后台</h2>
         <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>博客</a>
         <a href="#" class=" m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
         <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
@@ -44,8 +44,9 @@
         <h3>Hi,</h3>
         <p th:text="${username}+'，欢迎登录！'">李仁密，欢迎登录！</p>
       </div>
-
-      <img src="/images/hello.jpg" alt="" class="ui rounded bordered fluid image">
+      <div class="ui segment">
+        <img src="https://unsplash.it/800/600?image=1005" alt="" class="ui rounded image" th:src="@{/images/hello.jpg}">
+      </div>
     </div>
   </div>
 

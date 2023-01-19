@@ -32,8 +32,6 @@ public class CommentController {
 
     @PostMapping("/comments")
     public String post(Comment comment,HttpSession session){
-        System.out.println(comment
-        );
         Long getid=System.currentTimeMillis();
         int t=0;
         while (commentService.getCommentById(getid)!=null ){

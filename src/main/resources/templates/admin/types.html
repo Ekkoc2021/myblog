@@ -13,7 +13,7 @@
 <nav th:replace="admin/_fragments :: menu(2)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h2 class="ui teal header item">管理后台</h2>
+            <h2 class="ui blue header item">管理后台</h2>
             <a href="#" class="active m-item item m-mobile-hide"><i class="mini home icon"></i>博客</a>
             <a href="#" class=" m-item item m-mobile-hide"><i class="mini idea icon"></i>分类</a>
             <a href="#" class="m-item item m-mobile-hide"><i class="mini tags icon"></i>标签</a>
@@ -39,7 +39,7 @@
     <div class="ui container">
         <div class="right menu">
             <a href="#" th:href="@{/admin/types/input}" class="item">新增</a>
-            <a href="#" th:href="@{/admin/types/1}" class="teal active item">列表</a>
+            <a href="#" th:href="@{/admin/types/1}" class="blue active item">列表</a>
         </div>
     </div>
 </div>
@@ -52,7 +52,7 @@
             <div class="header">提示：</div>
             <p th:text="${message}">恭喜，操作成功！</p>
         </div>
-        <table class="ui compact teal table">
+        <table class="ui compact blue table">
             <thead>
             <tr>
                 <th></th>
@@ -66,7 +66,7 @@
                 <td th:text="${type.name}">刻意练习清单</td>
                 <td>
                     <a href="#" th:href="@{/admin/types/{id}/input(id=${type.id})}"
-                       class="ui mini teal basic button">编辑</a>
+                       class="ui mini blue basic button">编辑</a>
                     <a href="#" th:href="@{/admin/types/{id}/delete(id=${type.id})}"
                        class="ui mini red basic button">删除</a>
                 </td>
@@ -80,7 +80,7 @@
                            th:unless="${page.isIsFirstPage()}">上一页</a>
                         <a th:href="@{/admin/types/{page}(page=(${page.getPageNum()}+1))}" class=" item" th:unless="${page.isIsLastPage()}">下一页</a>
                     </div>
-                    <a href="#" th:href="@{/admin/types/input}" class="ui mini right floated teal basic button">新增</a>
+                    <a href="#" th:href="@{/admin/types/input}" class="ui mini right floated blue basic button">新增</a>
                 </th>
             </tr>
             </tfoot>

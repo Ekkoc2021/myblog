@@ -19,6 +19,13 @@ import java.util.Map;
 @Service
 public class BlogServiceImpl implements BlogService {
     @Override
+    public PageInfo<Blog> getDiarys(int pageNum) {
+        PageHelper.startPage(pageNum,10);
+        List<Blog> blogList=blogMapper.selectDiary();
+        return new PageInfo<>(blogList);
+    }
+
+    @Override
     public void updateBlogsTypename(String oldname, String newname) {
         blogMapper.updateBlogsTypename(oldname,newname);
     }
@@ -40,7 +47,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public PageInfo<Blog> listBlogByTagId(Long id,int pagenum) {
-        PageHelper.startPage(pagenum,10);
+        PageHelper.startPage(pagenum,5);
         List<Blog> blogs = blogMapper.selectBlogByTagId(id);
         PageInfo<Blog> pageInfo=new PageInfo<>(blogs);
         return pageInfo;
@@ -48,7 +55,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public PageInfo<Blog> listBlogbByTypeId(Long id, int pagenum) {
-        PageHelper.startPage(pagenum,10);
+        PageHelper.startPage(pagenum,5);
         List<Blog> blogList=blogMapper.selectBlogByTypeId(id);
         PageInfo<Blog> pageInfo=new PageInfo<>(blogList);
         return pageInfo;
@@ -69,7 +76,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public PageInfo<Blog> searchBlog(String search, int pagenum) {
-        PageHelper.startPage(pagenum,10);
+        PageHelper.startPage(pagenum,5);
         List<Blog> blogList =blogMapper.selectBlogBySearch(search);
         PageInfo<Blog> blogPageInfo=new PageInfo<>(blogList);
         return blogPageInfo;
@@ -85,7 +92,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public PageInfo<Blog> listPulbishedBlog(int pageNum) {
-        PageHelper.startPage(pageNum,10);
+        PageHelper.startPage(pageNum,5);
         List<Blog> blogList=blogMapper.selectPulbishedBlogs();
         PageInfo<Blog> pageInfo= new PageInfo<>(blogList);
         return pageInfo;

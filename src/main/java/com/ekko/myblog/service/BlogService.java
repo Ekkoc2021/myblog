@@ -2,7 +2,6 @@ package com.ekko.myblog.service;
 
 import com.ekko.myblog.pojo.Blog;
 import com.ekko.myblog.pojo.BlogQuery;
-import com.ekko.myblog.pojo.Tag;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
@@ -36,4 +35,6 @@ public interface BlogService {
     int getBlogsCount();
 
     void updateBlogsTypename(String oldname, String newname);
+
+    PageInfo<Blog> getDiarys(int pageNum);
 }

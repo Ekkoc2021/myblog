@@ -9,5 +9,7 @@ import java.util.List;
 public interface BlogTagService {
     void addBlogTags(List<BlogTag> blogTags);
 
-    void deleteBlogTag(Long id);
+    void deleteBlogTag(Long blogid);
+
+    void deleteByTagid(Long tagid);
 }

@@ -10,6 +10,11 @@ import java.util.List;
 
 @Service
 public class BlogTagServiceImpl implements BlogTagService {
+    @Override
+    public void deleteByTagid(Long tagid) {
+        blogTagMapper.deleteByTagId(tagid);
+    }
+
     @Autowired
     private BlogTagMapper blogTagMapper;
     @Override

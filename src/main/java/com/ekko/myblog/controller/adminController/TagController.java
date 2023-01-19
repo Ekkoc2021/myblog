@@ -9,6 +9,7 @@ import com.sun.org.apache.bcel.internal.generic.NEW;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -78,8 +79,10 @@ public class TagController {
 
 //    http://localhost:8080/admin/tags/deleteTag/24/1/delete
     @GetMapping("/tags/deleteTag/{id}/{backPage}/delete")
+    @Transactional
     public String delete(@PathVariable int backPage,@PathVariable Long id,RedirectAttributes redirectAttributes){
         try {
+            blogTagService.deleteByTagid(id);
             tagService.deleteTags(id);
             redirectAttributes.addFlashAttribute("message","删除成功!");
         }catch (Exception e){

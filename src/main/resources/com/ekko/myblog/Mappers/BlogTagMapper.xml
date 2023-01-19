@@ -10,4 +10,7 @@
     <delete id="deleteByBlogId">
         delete from blog_tag where blogid =#{id};
     </delete>
+    <delete id="deleteByTagId">
+        delete from blog_tag where tagid =#{tagid};
+    </delete>
 </mapper>

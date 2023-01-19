@@ -9,4 +9,6 @@ public interface BlogTagMapper {
     void insertBlogTag(@Param("BlogTag") BlogTag blogTag);
 
     void deleteByBlogId(@Param("id") Long id);
+
+    void deleteByTagId(@Param("tagid")Long tagid);
 }

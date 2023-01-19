@@ -17,7 +17,7 @@
   <nav th:replace="admin/_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
     <div class="ui container">
       <div class="ui inverted secondary stackable menu">
-        <h2 class="ui teal header item">管理后台</h2>
+        <h2 class="ui blue header item">管理后台</h2>
         <a href="#" class="active m-item item m-mobile-hide"><i class="home icon"></i>博客</a>
         <a href="#" class=" m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
         <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
@@ -44,13 +44,13 @@
     <div class="ui container">
       <div class="right menu">
         <a href="#" th:href="@{/admin/blogs/input}" class=" item">发布</a>
-        <a href="#" th:href="@{/admin/blogs}" class="teal active item">列表</a>
+        <a href="#" th:href="@{/admin/blogs}" class="blue active item">列表</a>
       </div>
     </div>
   </div>
 
   <!--中间内容-->
-  <div  class="m-container-small m-padded-tb-big">
+  <div  class="m-container m-padded-tb-big">
     <div class="ui container">
       <div  class="ui secondary segment form">
         <input type="hidden" name="page" >
@@ -82,13 +82,13 @@
             </div>
           </div>
           <div class="field">
-            <button  type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
+            <button  type="button" id="search-btn" class="ui mini brown basic button"><i class="search icon"></i>搜索</button>
           </div>
         </div>
       </div>
-      <div><font color="red">注意:默认查询条件是"推荐"!</font></div>
+      <div><font color="red"><b>注意:默认查询条件是"推荐"!</b></font></div>
       <div id="table-container">
-        <table th:fragment="blogList" class="ui compact teal table">
+        <table th:fragment="blogList" class="ui black table">
           <thead>
           <tr>
             <th></th>
@@ -107,11 +107,10 @@
             <td th:text="${blog.typename}">认知升级</td>
             <td th:text="${blog.recommend} ? '是':'否'">是</td>
             <td th:text="${blog.published} ? '发布':'草稿'">草稿</td>
-            <td th:text="${blog.updateTime}">2017-10-02 09:45</td>
+            <td th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">2017-10-02 09:45</td>
             <td>
-              <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini teal basic button">编辑</a>
-              <!--todo -->
-              <a href="#" th:href="@{/admin/blog/{id}(id=${blog.id})}" class="ui mini teal basic button">查看</a>
+              <a href="#" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}" class="ui mini black basic button">编辑</a>
+              <a href="#" th:href="@{/admin/blog/{id}(id=${blog.id})}" class="ui mini blue basic button">查看</a>
               <a href="#" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}" class="ui mini red basic button">删除</a>
             </td>
           </tr>
@@ -123,7 +122,7 @@
                 <a onclick="page(this)" th:attr="data-page=${page.getPageNum()}-1" class="item" th:unless="${page.isIsFirstPage()}">上一页</a>
                 <a onclick="page(this)" th:attr="data-page=${page.getPageNum()}+1" class=" item" th:unless="${page.isIsLastPage()}">下一页</a>
               </div>
-              <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated teal basic button">新增</a>
+              <a href="#" th:href="@{/admin/blogs/input}" class="ui mini right floated primary basic button">新增</a>
             </th>
           </tr>
           </tfoot>
