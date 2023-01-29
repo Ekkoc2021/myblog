@@ -5,31 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c113fd4f-a9ad-405b-9e98-1ffe6838b4b9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/log/blog-pro.log.2023-01-14.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/blog-pro.log.2023-01-19.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/gongan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/gongan2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/blog-pro.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ekko/myblog/Mappers/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ekko/myblog/Mappers/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ekko/myblog/Mappers/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ekko/myblog/Mappers/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ekko/myblog/controller/adminController/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ekko/myblog/controller/adminController/BlogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/log/blog-pro.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/myblog-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/myblog-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/myblog-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/myblog-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ekko.myblog.BlogServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ekko.myblog.BlogServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ekko.myblog.CommentServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ekko.myblog.CommentServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ekko.myblog.TagServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ekko.myblog.TagServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ekko.myblog.TypeServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ekko.myblog.TypeServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ekko.myblog.UserServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ekko.myblog.UserServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ekko.myblog.BlogServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ekko.myblog.BlogServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ekko.myblog.CommentServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ekko.myblog.CommentServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ekko.myblog.TagServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ekko.myblog.TagServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ekko.myblog.TypeServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ekko.myblog.TypeServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ekko.myblog.UserServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ekko.myblog.UserServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-pro.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/_fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs-input.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/inputDiary.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/inputDiary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,10 +24,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -90,13 +75,15 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -105,14 +92,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\templates\admin" />
       <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\static\images" />
+      <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\templates\admin" />
       <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\templates" />
       <recent name="E:\workspace\idea_workspace02\myblog\target\classes\static\images" />
       <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\static\images" />
+      <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\static" />
       <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\com\ekko\myblog\Mappers" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -286,6 +274,11 @@
       <workItem from="1673693572998" duration="1269000" />
       <workItem from="1673696819028" duration="3000" />
       <workItem from="1673707303930" duration="5448000" />
+      <workItem from="1674012278258" duration="1000" />
+      <workItem from="1674013058975" duration="2112000" />
+      <workItem from="1674102571456" duration="19686000" />
+      <workItem from="1674141248681" duration="1448000" />
+      <workItem from="1674981947994" duration="2583000" />
     </task>
     <task id="LOCAL-00001" summary="blog">
       <created>1673618556433</created>
@@ -336,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673693980397</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="忘记上传">
+      <created>1674982025953</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674982025953</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +346,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="blog" />
     <MESSAGE value="修改统计类型以及博客数量时的显示无名称类型0容量问题!" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改统计类型以及博客数量时的显示无名称类型0容量问题!" />
+    <MESSAGE value="忘记上传" />
+    <option name="LAST_COMMIT_MESSAGE" value="忘记上传" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -367,36 +368,6 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/ekko/myblog/CommentServiceTest.java</url>
           <line>17</line>
           <option name="timeStamp" value="33" />
@@ -409,6 +380,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="3" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="40" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
