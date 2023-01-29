@@ -37,6 +37,12 @@ public class LoginContraller {
         return "redirect:/admin";//重定向,直接跳转会出现问题
     }
 
+    //每次不小心访问/admin/login都会打印错误日志
+    @GetMapping("/login")
+    public String tologin(){
+        return "redirect:/admin";//重定向,直接跳转会出现问题
+    }
+
     @GetMapping("/logout")
     public String logout(HttpSession session){
         session.removeAttribute("user");
