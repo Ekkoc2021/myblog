@@ -1,17 +1,129 @@
-2023-01-14 18:57:08.788  INFO 14988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2023-01-14 18:57:08.789  INFO 14988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2023-01-14 18:57:09.919  INFO 14988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
-2023-01-14 18:57:09.927  INFO 14988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-01-14 18:57:09.927  INFO 14988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
-2023-01-14 18:57:09.980  INFO 14988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-01-14 18:57:09.981  INFO 14988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1192 ms
-2023-01-14 18:57:10.107  INFO 14988 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2023-01-14 18:57:10.230  INFO 14988 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2023-01-14 18:57:10.676  INFO 14988 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-01-14 18:57:10.973  INFO 14988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2023-01-14 18:57:11.005  INFO 14988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
-2023-01-14 18:57:42.355  INFO 14988 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-14 18:57:42.355  INFO 14988 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-01-14 18:57:42.357  INFO 14988 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2023-01-14 18:58:05.808  INFO 14988 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2023-01-14 18:58:05.812  INFO 14988 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-02-03 12:37:49.097  INFO 12256 --- [restartedMain] com.ekko.myblog.MyblogApplication        : Starting MyblogApplication using Java 1.8.0_31 on 21c with PID 12256 (E:\workspace\idea_workspace02\myblog\target\classes started by Administrator in E:\workspace\idea_workspace02\myblog)
+2023-02-03 12:37:49.097  INFO 12256 --- [restartedMain] com.ekko.myblog.MyblogApplication        : The following 1 profile is active: "pro"
+2023-02-03 12:37:49.129  INFO 12256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-03 12:37:49.129  INFO 12256 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-03 12:37:50.247  INFO 12256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-02-03 12:37:50.263  INFO 12256 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-03 12:37:50.263  INFO 12256 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-02-03 12:37:50.326  INFO 12256 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-03 12:37:50.326  INFO 12256 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1197 ms
+2023-02-03 12:37:50.467  INFO 12256 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-02-03 12:37:50.561  INFO 12256 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-02-03 12:37:51.065  INFO 12256 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-03 12:37:51.369  INFO 12256 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-03 12:37:51.413  INFO 12256 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-02-03 12:37:51.418  INFO 12256 --- [restartedMain] com.ekko.myblog.MyblogApplication        : Started MyblogApplication in 2.739 seconds (JVM running for 3.771)
+2023-02-03 12:38:14.987  INFO 12256 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-03 12:38:14.988  INFO 12256 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-03 12:38:14.989  INFO 12256 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-03 12:38:15.014  INFO 12256 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.LogAspect         : url:http://localhost/  ip:0:0:0:0:0:0:0:1  args:[]  methodName:index0
+2023-02-03 12:38:15.019  INFO 12256 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.LogAspect         :  result:redirect:/index/1
+2023-02-03 12:38:15.046  INFO 12256 --- [http-nio-80-exec-2] com.ekko.myblog.aspect.LogAspect         : url:http://localhost/index/1  ip:0:0:0:0:0:0:0:1  args:[1, {}]  methodName:index
+2023-02-03 12:38:16.572  INFO 12256 --- [http-nio-80-exec-2] com.ekko.myblog.aspect.LogAspect         :  result:index
+2023-02-03 12:39:59.070  WARN 12256 --- [http-nio-80-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://47.100.220.147:3306/blog?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai, version : 1.2.5, lastPacketReceivedIdleMillis : 102482
+2023-02-03 12:40:44.559  INFO 12256 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-02-03 12:40:44.564  INFO 12256 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-02-03 12:43:03.422  INFO 10184 --- [restartedMain] com.ekko.myblog.MyblogApplication        : Starting MyblogApplication using Java 1.8.0_31 on 21c with PID 10184 (E:\workspace\idea_workspace02\myblog\target\classes started by Administrator in E:\workspace\idea_workspace02\myblog)
+2023-02-03 12:43:03.422  INFO 10184 --- [restartedMain] com.ekko.myblog.MyblogApplication        : The following 1 profile is active: "pro"
+2023-02-03 12:43:03.471  INFO 10184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-03 12:43:03.474  INFO 10184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-03 12:43:04.613  INFO 10184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-02-03 12:43:04.622  INFO 10184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-03 12:43:04.622  INFO 10184 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-02-03 12:43:04.675  INFO 10184 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-03 12:43:04.675  INFO 10184 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1201 ms
+2023-02-03 12:43:04.833  INFO 10184 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-02-03 12:43:04.912  INFO 10184 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-02-03 12:43:05.321  INFO 10184 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-03 12:43:05.589  INFO 10184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-03 12:43:05.621  INFO 10184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-02-03 12:43:05.621  INFO 10184 --- [restartedMain] com.ekko.myblog.MyblogApplication        : Started MyblogApplication in 2.51 seconds (JVM running for 3.276)
+2023-02-03 12:43:15.138  INFO 10184 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-03 12:43:15.139  INFO 10184 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-03 12:43:15.141  INFO 10184 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-02-03 12:43:15.173  INFO 10184 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.LogAspect         : -----began----------
+2023-02-03 12:43:15.176  INFO 10184 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.LogAspect         : url:http://localhost/  ip:0:0:0:0:0:0:0:1  args:[]  methodName:index0
+2023-02-03 12:43:15.182  INFO 10184 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.LogAspect         :  result:redirect:/index/1
+2023-02-03 12:43:15.182  INFO 10184 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.LogAspect         : -----end----------
+2023-02-03 12:43:15.211  INFO 10184 --- [http-nio-80-exec-5] com.ekko.myblog.aspect.LogAspect         : -----began----------
+2023-02-03 12:43:15.211  INFO 10184 --- [http-nio-80-exec-5] com.ekko.myblog.aspect.LogAspect         : url:http://localhost/index/1  ip:0:0:0:0:0:0:0:1  args:[1, {}]  methodName:index
+2023-02-03 12:43:16.815  INFO 10184 --- [http-nio-80-exec-5] com.ekko.myblog.aspect.LogAspect         :  result:index
+2023-02-03 12:43:16.815  INFO 10184 --- [http-nio-80-exec-5] com.ekko.myblog.aspect.LogAspect         : -----end----------
+2023-02-03 12:43:21.205  INFO 10184 --- [http-nio-80-exec-7] com.ekko.myblog.aspect.LogAspect         : -----began----------
+2023-02-03 12:43:21.206  INFO 10184 --- [http-nio-80-exec-7] com.ekko.myblog.aspect.LogAspect         : url:http://localhost/blog/1675394698991  ip:0:0:0:0:0:0:0:1  args:[1675394698991, {}]  methodName:blogDetail
+2023-02-03 12:43:21.508  INFO 10184 --- [http-nio-80-exec-7] com.ekko.myblog.aspect.LogAspect         :  result:blog
+2023-02-03 12:43:21.509  INFO 10184 --- [http-nio-80-exec-7] com.ekko.myblog.aspect.LogAspect         : -----end----------
+2023-02-03 12:44:15.492  INFO 10184 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-02-03 12:44:15.492  INFO 10184 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-02-03 12:47:47.946  INFO 11668 --- [restartedMain] com.ekko.myblog.MyblogApplication        : Starting MyblogApplication using Java 1.8.0_31 on 21c with PID 11668 (E:\workspace\idea_workspace02\myblog\target\classes started by Administrator in E:\workspace\idea_workspace02\myblog)
+2023-02-03 12:47:47.946  INFO 11668 --- [restartedMain] com.ekko.myblog.MyblogApplication        : The following 1 profile is active: "pro"
+2023-02-03 12:47:47.978  INFO 11668 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-03 12:47:47.978  INFO 11668 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-03 12:47:48.922  INFO 11668 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-02-03 12:47:48.922  INFO 11668 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-03 12:47:48.922  INFO 11668 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-02-03 12:47:48.969  INFO 11668 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-03 12:47:48.969  INFO 11668 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 991 ms
+2023-02-03 12:47:49.080  INFO 11668 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-02-03 12:47:49.143  INFO 11668 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-02-03 12:47:49.632  INFO 11668 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-03 12:47:49.948  INFO 11668 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-03 12:47:49.984  INFO 11668 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-02-03 12:47:50.000  INFO 11668 --- [restartedMain] com.ekko.myblog.MyblogApplication        : Started MyblogApplication in 2.421 seconds (JVM running for 3.223)
+2023-02-03 12:47:54.296  INFO 11668 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-03 12:47:54.296  INFO 11668 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-03 12:47:54.297  INFO 11668 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-02-03 12:47:54.312  INFO 11668 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.adminLogAspect    : -----admin-began----------
+2023-02-03 12:47:54.312  INFO 11668 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.adminLogAspect    : url:http://localhost/admin  ip:0:0:0:0:0:0:0:1  args:[]  methodName:loginPage
+2023-02-03 12:47:54.312  INFO 11668 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.adminLogAspect    :  result:admin/login
+2023-02-03 12:47:54.312  INFO 11668 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.adminLogAspect    : -----admin-end----------
+2023-02-03 12:48:02.086  INFO 11668 --- [http-nio-80-exec-10] com.ekko.myblog.aspect.adminLogAspect    : -----admin-began----------
+2023-02-03 12:48:02.087  INFO 11668 --- [http-nio-80-exec-10] com.ekko.myblog.aspect.adminLogAspect    : url:http://localhost/admin/login  ip:0:0:0:0:0:0:0:1  args:[org.apache.catalina.session.StandardSessionFacade@4aa13b0f, {}, {}, y189890049, qwe456654.]  methodName:login
+2023-02-03 12:48:02.749  INFO 11668 --- [http-nio-80-exec-10] com.ekko.myblog.aspect.adminLogAspect    :  result:admin/index
+2023-02-03 12:48:02.749  INFO 11668 --- [http-nio-80-exec-10] com.ekko.myblog.aspect.adminLogAspect    : -----admin-end----------
+2023-02-03 12:48:46.947  INFO 11668 --- [http-nio-80-exec-3] com.ekko.myblog.aspect.adminLogAspect    : -----admin-began----------
+2023-02-03 12:48:46.947  INFO 11668 --- [http-nio-80-exec-3] com.ekko.myblog.aspect.adminLogAspect    : url:http://localhost/admin/blogs  ip:0:0:0:0:0:0:0:1  args:[BlogQuery(title=null, typeName=null, recommend=false, userid=null, page=0), {blogQuery=BlogQuery(title=null, typeName=null, recommend=false, userid=null, page=0), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, org.apache.catalina.session.StandardSessionFacade@4aa13b0f]  methodName:myblogs
+2023-02-03 12:48:47.195  INFO 11668 --- [http-nio-80-exec-3] com.ekko.myblog.aspect.adminLogAspect    :  result:admin/blogs
+2023-02-03 12:48:47.195  INFO 11668 --- [http-nio-80-exec-3] com.ekko.myblog.aspect.adminLogAspect    : -----admin-end----------
+2023-02-03 12:48:51.989  INFO 11668 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.adminLogAspect    : -----admin-began----------
+2023-02-03 12:48:51.990  INFO 11668 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.adminLogAspect    : url:http://localhost/admin/blogs/input  ip:0:0:0:0:0:0:0:1  args:[{}]  methodName:blogInput
+2023-02-03 12:48:52.091  INFO 11668 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.adminLogAspect    :  result:admin/blogs-input
+2023-02-03 12:48:52.091  INFO 11668 --- [http-nio-80-exec-1] com.ekko.myblog.aspect.adminLogAspect    : -----admin-end----------
+2023-02-03 12:49:04.867  INFO 11668 --- [http-nio-80-exec-8] com.ekko.myblog.aspect.adminLogAspect    : -----admin-began----------
+2023-02-03 12:49:04.868  INFO 11668 --- [http-nio-80-exec-8] com.ekko.myblog.aspect.adminLogAspect    : url:http://localhost/admin/blogs  ip:0:0:0:0:0:0:0:1  args:[Blog(id=null, title=你好世界, content=234123, firstPicture=/images/hello.jpg, flag=, views=null, appreciation=false, shareStatement=false, commentabled=false, published=false, recommend=true, createTime=null, updateTime=null, typename=Go基础笔记, userId=null, tags=[], user=null, comments=[], tagIds=1673266363401,1673264856270, description=213412), {}, org.apache.catalina.session.StandardSessionFacade@4aa13b0f]  methodName:addBlog
+2023-02-03 12:49:05.146  INFO 11668 --- [http-nio-80-exec-8] com.ekko.myblog.aspect.adminLogAspect    :  result:redirect:/admin/blogs
+2023-02-03 12:49:05.146  INFO 11668 --- [http-nio-80-exec-8] com.ekko.myblog.aspect.adminLogAspect    : -----admin-end----------
+2023-02-03 12:49:05.254  INFO 11668 --- [http-nio-80-exec-3] com.ekko.myblog.aspect.adminLogAspect    : -----admin-began----------
+2023-02-03 12:49:05.255  INFO 11668 --- [http-nio-80-exec-3] com.ekko.myblog.aspect.adminLogAspect    : url:http://localhost/admin/blogs  ip:0:0:0:0:0:0:0:1  args:[BlogQuery(title=null, typeName=null, recommend=false, userid=null, page=0), {message=添加成功!, blogQuery=BlogQuery(title=null, typeName=null, recommend=false, userid=null, page=0), org.springframework.validation.BindingResult.blogQuery=org.springframework.validation.BeanPropertyBindingResult: 0 errors}, org.apache.catalina.session.StandardSessionFacade@4aa13b0f]  methodName:myblogs
+2023-02-03 12:49:05.402  INFO 11668 --- [http-nio-80-exec-3] com.ekko.myblog.aspect.adminLogAspect    :  result:admin/blogs
+2023-02-03 12:49:05.403  INFO 11668 --- [http-nio-80-exec-3] com.ekko.myblog.aspect.adminLogAspect    : -----admin-end----------
+2023-02-03 12:50:00.704  INFO 11668 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-02-03 12:50:00.704  INFO 11668 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-02-03 12:51:05.513  INFO 8072 --- [restartedMain] com.ekko.myblog.MyblogApplication        : Starting MyblogApplication using Java 1.8.0_31 on 21c with PID 8072 (E:\workspace\idea_workspace02\myblog\target\classes started by Administrator in E:\workspace\idea_workspace02\myblog)
+2023-02-03 12:51:05.514  INFO 8072 --- [restartedMain] com.ekko.myblog.MyblogApplication        : The following 1 profile is active: "pro"
+2023-02-03 12:51:05.541  INFO 8072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-02-03 12:51:05.541  INFO 8072 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-02-03 12:51:06.494  INFO 8072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2023-02-03 12:51:06.510  INFO 8072 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-03 12:51:06.510  INFO 8072 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-02-03 12:51:06.556  INFO 8072 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-03 12:51:06.556  INFO 8072 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1015 ms
+2023-02-03 12:51:06.667  INFO 8072 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-02-03 12:51:06.746  INFO 8072 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-02-03 12:51:07.193  INFO 8072 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-02-03 12:51:07.513  INFO 8072 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-02-03 12:51:07.543  INFO 8072 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2023-02-03 12:51:07.543  INFO 8072 --- [restartedMain] com.ekko.myblog.MyblogApplication        : Started MyblogApplication in 2.364 seconds (JVM running for 3.114)
+2023-02-03 12:51:07.576  INFO 8072 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-03 12:51:07.576  INFO 8072 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-03 12:51:07.576  INFO 8072 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-02-03 12:51:07.594  INFO 8072 --- [http-nio-80-exec-5] com.ekko.myblog.aspect.adminLogAspect    : -----admin-began----------
+2023-02-03 12:51:07.594  INFO 8072 --- [http-nio-80-exec-5] com.ekko.myblog.aspect.adminLogAspect    : url:http://localhost/admin  ip:127.0.0.1   methodName:loginPage
+2023-02-03 12:51:07.594  INFO 8072 --- [http-nio-80-exec-5] com.ekko.myblog.aspect.adminLogAspect    :  result:admin/login
+2023-02-03 12:51:07.594  INFO 8072 --- [http-nio-80-exec-5] com.ekko.myblog.aspect.adminLogAspect    : -----admin-end----------
+2023-02-03 12:51:14.739  INFO 8072 --- [http-nio-80-exec-10] com.ekko.myblog.aspect.adminLogAspect    : -----admin-began----------
+2023-02-03 12:51:14.739  INFO 8072 --- [http-nio-80-exec-10] com.ekko.myblog.aspect.adminLogAspect    : url:http://localhost/admin/login  ip:0:0:0:0:0:0:0:1   methodName:login
+2023-02-03 12:51:15.394  INFO 8072 --- [http-nio-80-exec-10] com.ekko.myblog.aspect.adminLogAspect    :  result:admin/index
+2023-02-03 12:51:15.394  INFO 8072 --- [http-nio-80-exec-10] com.ekko.myblog.aspect.adminLogAspect    : -----admin-end----------
+2023-02-03 12:52:24.938  INFO 8072 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-02-03 12:52:24.938  INFO 8072 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
