@@ -16,7 +16,7 @@ public class ContrllerExceptionHandler {
     @ExceptionHandler(Exception.class)
     public String exceptionHander(HttpServletRequest request, Exception e, Model m) throws Exception {
         logger.error("Request URL : {},Exception : {}" +request.getRequestURL(),e);
-        //如果得到的异常我们自定义的异常,交给spring处理,根据响应跳到指定页面
+        //如果得到的异常是我们自定义的异常,交给spring处理,根据响应跳到指定页面
         if (AnnotationUtils.findAnnotation(e.getClass(), ResponseStatus.class)==null){
             throw e;
         }

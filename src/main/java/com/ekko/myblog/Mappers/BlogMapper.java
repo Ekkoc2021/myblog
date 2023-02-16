@@ -15,6 +15,8 @@ public interface BlogMapper {
 
     void insertBlog(@Param("blog") Blog blog);
 
+    Blog selectPublishedBlogByid(@Param("id") Long id);
+
     Blog selectBlogByid(@Param("id") Long id);
 
     void updateBlog(@Param("blog") Blog blog);

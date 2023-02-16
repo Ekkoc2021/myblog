@@ -1,4 +1,5 @@
 package com.ekko.myblog.controller;
+import com.ekko.myblog.exception.NotFoundException;
 import com.ekko.myblog.pojo.Blog;
 import com.ekko.myblog.service.BlogService;
 import com.ekko.myblog.service.TagService;
@@ -66,7 +67,10 @@ public class IndexController {
 
     @GetMapping("/blog/{id}")
     public String blogDetail(@PathVariable Long id, Model model){
-        Blog blog = blogService.getBlogAndConvert(id);
+        Blog blog = blogService.getPublishedBlogAndConvert(id);
+        if(blog==null){//查询到的博客为空!
+            throw new NotFoundException("博客不存在或者尚未发布!");
+        }
         userService.setBlogUser(blog);
         blog.setTags(tagService.getTagsByBlogId(blog.getId()));
         model.addAttribute("blog",blog);

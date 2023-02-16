@@ -9,6 +9,7 @@ import java.util.Map;
 
 public interface BlogService {
     Blog getBlogAndConvert(Long id);
+    Blog getPublishedBlogAndConvert(Long id);
     PageInfo<Blog> listPulbishedBlog(int pageNum);
 
     PageInfo<Blog> getBlogs(BlogQuery blogQuery);

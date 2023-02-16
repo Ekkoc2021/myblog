@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c113fd4f-a9ad-405b-9e98-1ffe6838b4b9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/log/blog-pro.log.2023-01-29.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/blog-pro.log.2023-01-30.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/aspect/adminLogAspect.java" afterDir="false" />
+    <list default="true" id="c113fd4f-a9ad-405b-9e98-1ffe6838b4b9" name="Changes" comment="2/3 打印更加详细的info">
+      <change afterPath="$PROJECT_DIR$/log/blog-pro.log.2023-02-03.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/blog-pro.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/aspect/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/blog-pro.log.2023-01-29.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/blog-pro.log.2023-01-30.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/Mappers/BlogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/Mappers/BlogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/handler/ContrllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/handler/ContrllerExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/serviceImpl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/serviceImpl/BlogServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-pro.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ekko/myblog/Mappers/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ekko/myblog/Mappers/BlogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +43,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/ekko/myblog/Mappers/TypeMapper.xml" root0="FORCE_HIGHLIGHTING" />
@@ -80,7 +96,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -277,7 +293,11 @@
       <workItem from="1674141248681" duration="1448000" />
       <workItem from="1674981947994" duration="3183000" />
       <workItem from="1675039973656" duration="933000" />
-      <workItem from="1675398741503" duration="1113000" />
+      <workItem from="1675398741503" duration="1993000" />
+      <workItem from="1675516372547" duration="3000" />
+      <workItem from="1675735360149" duration="492000" />
+      <workItem from="1675738710921" duration="71000" />
+      <workItem from="1676523743088" duration="3809000" />
     </task>
     <task id="LOCAL-00001" summary="blog">
       <created>1673618556433</created>
@@ -342,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674984813245</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="2/3 打印更加详细的info">
+      <created>1675400068458</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675400068458</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +381,8 @@
     <MESSAGE value="修改统计类型以及博客数量时的显示无名称类型0容量问题!" />
     <MESSAGE value="忘记上传" />
     <MESSAGE value="1/29 公安备案" />
-    <option name="LAST_COMMIT_MESSAGE" value="1/29 公安备案" />
+    <MESSAGE value="2/3 打印更加详细的info" />
+    <option name="LAST_COMMIT_MESSAGE" value="2/3 打印更加详细的info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -383,6 +411,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/ekko/myblog/CommentServiceTest.java</url>
           <line>18</line>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ekko/myblog/handler/ContrllerExceptionHandler.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />

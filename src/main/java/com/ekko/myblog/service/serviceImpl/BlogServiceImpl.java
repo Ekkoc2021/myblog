@@ -67,8 +67,21 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public Blog getPublishedBlogAndConvert(Long id){
+        Blog blog = blogMapper.selectPublishedBlogByid(id);
+        if(blog==null){
+            return null;
+        }
+        String s = MarkdownUtils.markdownToHtmlExtensions(blog.getContent());
+        blog.setContent(s);
+        return blog;
+    }
+    @Override
     public Blog getBlogAndConvert(Long id) {
         Blog blog = blogMapper.selectBlogByid(id);
+        if(blog==null){
+            return null;
+        }
         String s = MarkdownUtils.markdownToHtmlExtensions(blog.getContent());
         blog.setContent(s);
         return blog;

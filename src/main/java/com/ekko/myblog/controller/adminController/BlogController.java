@@ -1,5 +1,6 @@
 package com.ekko.myblog.controller.adminController;
 
+import com.ekko.myblog.exception.NotFoundException;
 import com.ekko.myblog.pojo.*;
 import com.ekko.myblog.service.*;
 import com.ekko.myblog.util.Converter;
@@ -28,6 +29,9 @@ public class BlogController {
     @GetMapping("/blog/{id}")
     public String blogDetail(@PathVariable Long id, Model model){
         Blog blog = blogService.getBlogAndConvert(id);
+        if(blog==null){
+            throw new NotFoundException("该博客不存在!");
+        }
         userService.setBlogUser(blog);
         blog.setTags(tagService.getTagsByBlogId(blog.getId()));
         model.addAttribute("blog",blog);

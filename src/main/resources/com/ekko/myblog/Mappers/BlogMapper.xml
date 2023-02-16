@@ -95,6 +95,9 @@
     <select id="selectDiary" resultType="com.ekko.myblog.pojo.Blog">
         select * from blog where typename="日记" order by createTime desc
     </select>
+    <select id="selectPublishedBlogByid" resultType="com.ekko.myblog.pojo.Blog">
+        select * from blog where blog.id = #{id} and  published=true
+    </select>
 
 
 </mapper>
