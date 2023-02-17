@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c113fd4f-a9ad-405b-9e98-1ffe6838b4b9" name="Changes" comment="2/3 打印更加详细的info">
-      <change afterPath="$PROJECT_DIR$/log/blog-pro.log.2023-02-03.0.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/blog-pro.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log.2023-01-29.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log.2023-01-30.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/Mappers/BlogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/Mappers/BlogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/handler/ContrllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/handler/ContrllerExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/serviceImpl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/serviceImpl/BlogServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-pro.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ekko/myblog/Mappers/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ekko/myblog/Mappers/BlogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/diary.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/diary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,7 +288,8 @@
       <workItem from="1675516372547" duration="3000" />
       <workItem from="1675735360149" duration="492000" />
       <workItem from="1675738710921" duration="71000" />
-      <workItem from="1676523743088" duration="3809000" />
+      <workItem from="1676523743088" duration="3967000" />
+      <workItem from="1676602460093" duration="347000" />
     </task>
     <task id="LOCAL-00001" summary="blog">
       <created>1673618556433</created>
@@ -369,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675400068458</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="解决了只要知道文章id就能查看没有发布文章的问题！">
+      <created>1676532555506</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676532555506</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +381,8 @@
     <MESSAGE value="忘记上传" />
     <MESSAGE value="1/29 公安备案" />
     <MESSAGE value="2/3 打印更加详细的info" />
-    <option name="LAST_COMMIT_MESSAGE" value="2/3 打印更加详细的info" />
+    <MESSAGE value="解决了只要知道文章id就能查看没有发布文章的问题！" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决了只要知道文章id就能查看没有发布文章的问题！" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

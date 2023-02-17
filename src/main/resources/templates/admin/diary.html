@@ -147,9 +147,11 @@
 <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
 
 <script>
+
     $('.menu.toggle').click(function () {
         $('.m-item').toggleClass('m-mobile-hide');
     });
+
     $('.ui.dropdown').dropdown({
         on : 'hover'
     });
@@ -161,9 +163,6 @@
     }
     setInterval(setTime, 1000);
 
-    $('.menu.toggle').click(function () {
-        $('.m-item').toggleClass('m-mobile-hide');
-    });
 </script>
 </body>
 </html>
