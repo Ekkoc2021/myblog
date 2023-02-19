@@ -35,14 +35,23 @@ public class BlogServiceImpl implements BlogService {
         return blogMapper.selectBlogCount();
     }
 
+    /**
+     * @return 归档的年份
+     */
     @Override
-    public Map<String, List<Blog>> mapArchives() {
-        Map<String, List<Blog>> map=new LinkedHashMap<>();
+    public PageInfo<String> getArchivesYear(int pageNum) {
+        PageHelper.startPage(pageNum,11);
         List<String> years=blogMapper.selectBlogYears();
-        for (String y:years) {
-            map.put(y,blogMapper.selectBlogByYear(y));
-        }
-        return map;
+        PageInfo<String> pageInfo = new PageInfo(years);
+        return pageInfo;
+    }
+
+    @Override
+    public PageInfo<Blog> getArchivesDetail(int num,String year) {
+        PageHelper.startPage(num,11);
+        List<Blog> blogList = blogMapper.selectBlogByYear(year);
+        PageInfo<Blog> pageInfo=new PageInfo<>(blogList);
+        return pageInfo;
     }
 
     @Override
@@ -105,7 +114,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public PageInfo<Blog> listPulbishedBlog(int pageNum) {
-        PageHelper.startPage(pageNum,5);
+        PageHelper.startPage(pageNum,7);
         List<Blog> blogList=blogMapper.selectPulbishedBlogs();
         PageInfo<Blog> pageInfo= new PageInfo<>(blogList);
         return pageInfo;

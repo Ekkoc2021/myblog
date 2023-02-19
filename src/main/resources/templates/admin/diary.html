@@ -155,14 +155,9 @@
     $('.ui.dropdown').dropdown({
         on : 'hover'
     });
-    function setTime() {
-        var now = new Date();
-        create= now.getFullYear()+"-"+(now.getMonth()+1)+"-"+now.getDate()+"  "
-            +now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
-        document.getElementById("htmer_time").innerHTML = create;
-    }
-    setInterval(setTime, 1000);
-
 </script>
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<!--/*/</th:block>/*/-->
 </body>
 </html>

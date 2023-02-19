@@ -40,34 +40,47 @@
             <div class="ui top attached padded segment">
                 <div class="ui middle aligned two column grid">
                     <div class="column">
-                        <h3 class="ui blue header">年份归档</h3>
+                        <h3 th:text="${year}+'年归档'">2017</h3>
+                    </div>
+                    <div class="right aligned column">
+                        共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${page.getTotal()}"> 114 </h2> 篇文章
                     </div>
                 </div>
             </div>
 
             <div class="ui attached  segment">
-                <div><font >查看对应年份的文章!</font></div>
-<!--                <div class="ui padded vertical segment m-padded-tb-large" >-->
-                    <div class="ui fluid vertical menu" th:each="year : ${page.getList()}">
-                        <a style="display: block; text-align: center;" href="#" th:href="@{/archives/detail/{y}(y=${year})}+'/1'" th:text="${year}" target="_blank" class="item">2022
+<!--                <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.getList()}">-->
+                    <div class="ui fluid vertical menu" th:each="blog : ${page.getList()}" >
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item" >
+
+          <span>
+            <i class="mini blue circle icon"></i><span th:text="${blog.title}">关于刻意练习的清单</span>
+            <div class="ui blue basic left pointing label m-padded-mini "
+                 th:text="'创建时间：'+${blog.createTime}">9月03</div>
+            <div class="ui blue basic left pointing label m-padded-mini "
+                 th:text="'最后更新时间：'+${blog.updateTime}">9月03</div>
+          </span>
+                            <div class="ui orange basic left pointing label m-padded-mini " th:text="${blog.flag}">原创
+                            </div>
                         </a>
-<!--                    </div>-->
-                </div>
+
+                    </div>
+<!--                </div>-->
             </div>
             <div class="ui bottom attached segment" th:if="${page.getPages}>1">
                 <div class="ui middle aligned two column grid">
                     <div class="column">
-                        <a href="#" th:href="@{/archives/{page}(page=${page.getPageNum()}-1)}"
+                        <a href="#" th:href="@{/archives/detail/{y}(y=${year})}+@{/{page}(page=${page.getPageNum()}-1)}"
                            th:unless="${page.isIsFirstPage()}" class="ui mini blue basic button">上一页</a>
                     </div>
                     <div class="right aligned column">
-                        <a href="#" th:href="@{/archives/{page}(page=${page.getPageNum()}+1)}"
+                        <a href="#" th:href="@{/archives/detail/{y}(y=${year})}+@{/{page}(page=${page.getPageNum()}+1)}"
                            th:unless="${page.isIsLastPage()}" class="ui mini blue basic button">下一页</a>
                     </div>
                 </div>
             </div>
         </div>
-
+        </div>
     </div>
 </div>
 

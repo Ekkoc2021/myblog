@@ -2,6 +2,7 @@ package com.ekko.myblog.service;
 
 import com.ekko.myblog.pojo.Blog;
 import com.ekko.myblog.pojo.BlogQuery;
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
@@ -31,7 +32,9 @@ public interface BlogService {
 
     PageInfo<Blog> listBlogByTagId(Long id,int pagenum);
 
-    Map<String,List<Blog>> mapArchives();
+    PageInfo<Blog> getArchivesDetail(int num,String year);
+
+    PageInfo<String> getArchivesYear(int pageNum);
 
     int getBlogsCount();
 

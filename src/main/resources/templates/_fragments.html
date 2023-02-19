@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title th:replace="${title}">博客详情</title>
+  <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico" th:href="@{http://image.ekkosblog.online/blogbackground/webioc.ico}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
   <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
   <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
@@ -15,19 +16,29 @@
 
 
 <!--导航-->
-<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
+<nav th:fragment="menu(n)" class="ui attached segment m-padded-tb-mini animate__animated animate__bounceInDown" >
   <div class="ui container">
     <div class="ui inverted secondary stackable menu">
-      <h2 class="ui blue header item">Note</h2>
-      <a href="#" th:href="@{/}" class="m-item item m-mobile-hide " th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
-      <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="idea icon"></i>分类</a>
-      <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tags icon"></i>标签</a>
-      <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="clone icon"></i>归档</a>
-      <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon"></i>关于我</a>
+      <h2 class="ui blue header item">Blog</h2>
+      <a href="#" th:href="@{/}" class="m-item item m-mobile-hide " th:classappend="${n==1} ? 'active'"><i class="home icon blue"></i><font color="black">首页</font></a>
+      <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i class="idea icon olive"></i><font color="black">分类</font></a>
+      <a href="#" th:href="@{/tags/-1}" class="m-item item m-mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tags icon purple"></i><font color="black">标签</font></a>
+      <a href="#" th:href="@{/archives}" class="m-item item m-mobile-hide" th:classappend="${n==4} ? 'active'"><i class="clone icon orange"></i><font color="black">归档</font></a>
+      <a href="#" th:href="@{/about}" class="m-item item m-mobile-hide" th:classappend="${n==5} ? 'active'"><i class="info icon brown"></i><font color="black">关于我</font></a>
+
+<!--      <div class="right m-item item m-mobile-hide">-->
+<!--        <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">-->
+<!--        <div class="ui icon transparent input m-margin-tb-tiny">-->
+<!--          <input style="color:black" type="text" placeholder="Search...." th:value="${query}">-->
+<!--          <i onclick="document.forms['search'].submit()" class="search link icon"></i>-->
+<!--        </div>-->
+<!--        </form>-->
+<!--      </div>-->
+
       <div class="right m-item item m-mobile-hide">
         <form name="search" action="#" th:action="@{/search}" method="post" target="_blank">
-          <div class="ui icon inverted transparent input m-margin-tb-tiny">
-            <input type="text" name="query" placeholder="Search...." th:value="${query}">
+          <div class="ui icon transparent input m-margin-tb-tiny">
+            <input style="color:black" type="text" name="query" placeholder="Search...." th:value="${query}">
             <i onclick="document.forms['search'].submit()" class="search link icon"></i>
           </div>
         </form>
@@ -42,10 +53,11 @@
 
 
 <!--底部footer-->
-<footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">
+<footer th:fragment="footer" class="ui inverted vertical  m-padded-tb-massive">
   <div class="ui center aligned container">
     <div class="ui inverted divided stackable grid">
       <div class="three wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced " ><font color="black">微信</font></h4>
         <div class="ui inverted link list">
           <div class="item">
             <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}"  class="ui rounded image" alt="" style="width: 110px">
@@ -53,32 +65,28 @@
         </div>
       </div>
       <div class="three wide column" >
-        <h4 class="ui inverted header m-text-thin m-text-spaced " >关于作者</h4>
+        <h4 class="ui inverted header m-text-thin m-text-spaced " ><font color="black">关于作者</font></h4>
         <div id="newblog-container">
-          <div class="ui inverted link list" th:fragment="newblogList">
-            <p class="item m-text-thin">热爱生活</p>
-            <p class="item m-text-thin">热爱技术</p>
+          <div class="ui inverted link list">
+            <p class="item m-text-thin"><font color="black">热爱生活</font></p>
+            <p class="item m-text-thin"><font color="black">热爱技术</font></p>
           </div>
         </div>
       </div>
       <div class="three wide column">
-        <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+        <h4 class="ui inverted header m-text-thin m-text-spaced "><font color="black">联系我</font></h4>
         <div class="ui inverted link list">
-          <p class="item m-text-thin">Email：189890049@qq.com</p>
-          <p class="item m-text-thin">QQ：189890049</p>
+          <p class="item m-text-thin "><font color="black">Email：189890049@qq.com</font></p>
+          <p class="item m-text-thin"><font color="black">QQ：189890049</font></p>
         </div>
       </div>
       <div class="seven wide column">
-        <h4 class="ui inverted header m-text-thin m-text-spaced ">网站</h4>
+        <h4 class="ui inverted header m-text-thin m-text-spaced "><font color="black">网站</font></h4>
         <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人网站、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
       </div>
     </div>
     <div class="ui inverted section divider"></div>
-    <div style="color: #F08047;margin-top: -18px"
-         class="ui inverted m-text-thin m-text-spaced">
-      <span class="item m-text-thin">2022-11-5 20:00  -  </span>
-      <span id="htmer_time" class="item m-text-thin"></span>
-    </div>
+    <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2022 - <span th:text="${#dates.year(#dates.createNow())}">2021</span> Ekko All Rights Reserved V.2.0</p>
     <div style="width:300px;margin:0 auto; padding:20px 0;">
       <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32031202000818" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="../../static/images/gongan.png" th:src="@{/images/gongan.png}" style="float:left;"/>
         <span style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; ">苏公网安备 32031202000818号</span></a>
@@ -91,27 +99,108 @@
 
 </footer>
   <!--<head  th:replace="_fragments :: head(~{::title})">-->
-  <th:block th:fragment="script">
+<th:block th:fragment="script">
+  <!--添加雪花动态效果-->
+  <script src="../static/js/snowflake.js" th:src="@{/js/snowflake.js}"></script>
+  <!-- 鼠标点击特效end -->
+  <script src="../static/js/mouse-click.js" th:src="@{/js/mouse-click.js}"></script>
+  <!--加入音乐播放器-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <div id="aplayer" class="aplayer" data-autoplay="false"  data-id="8811517791" data-server="tencent" data-type="playlist" data-fixed="true" data-listfolded="true" data-order="random" data-theme="#F58EA8"></div>
+  <script src="https://unpkg.com/meting@1.2.0/dist/Meting.min.js"></script>
+  <!--动态线条跟随-->
+  <script src="../static/js/canvas-nest.min.js" th:src="@{/js/canvas-nest.min.js}"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
   <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
   <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
   <script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
   <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+  <!--加入看板娘-->
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+
+
   <script>
-    $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+    var jsonModel = [
+      "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",// 萌娘
+      "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",// 小可爱（女）
+      "https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json",// 小可爱（男）
+      "https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json",// 小帅哥
+      "https://unpkg.com/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json", // 白猫
+      "https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json", // 狗狗
+      "https://unpkg.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json",
+      // 人物
+       "https://unpkg.com/live2d-widget-model-z16@1.0.5/assets/z16.model.json"
+    ];
+    L2Dwidget.init({
+      "model": {
+        "jsonPath": jsonModel[Math.floor(Math.random()*(jsonModel.length-1))],
+        "scale": 1
+      },
+      "display": {
+        "position": "right", // 位置left、right
+        "width": 120,
+        "height": 150,
+        "hOffset": 0,
+        "vOffset": -20
+      },
+      "mobile": {
+        "show": false // 手机是否显示
+      },
+      "react": {
+        "opacityDefault": 1,<!--设置透明度-->
+        "opacityOnHover": 0.2
+      }
+    });
   </script>
-</th:block>
-<th:block th:fragment="timeScript">
-  <script>
-    function setTime() {
-      var now = new Date();
-      create= now.getFullYear()+"-"+(now.getMonth()+1)+"-"+now.getDate()+"  "
-              +now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
-      document.getElementById("htmer_time").innerHTML = create;
-    }
-    setInterval(setTime, 1000);
+  <!--鼠标点击特效-->
+  <script type="text/javascript">
+    //定义获取词语下标
+    var a_idx = 0;
+    jQuery(document).ready(function ($) {
+      //点击body时触发事件
+      $("body").click(function (e) {
+        //需要显示的词语
+        var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+        //设置词语给span标签
+        var $i = $("<span/>").text(a[a_idx]);
+        //下标等于原来下标+1  余 词语总数
+        a_idx = (a_idx + 1) % a.length;
+        //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+        //获取x和y的指针坐标
+        var x = e.pageX, y = e.pageY;
+        //在鼠标的指针的位置给$i定义的span标签添加css样式
+        $i.css({
+          "z-index": 999,
+          "top": y - 20,
+          "left": x,
+          "position": "absolute",
+          "font-weight": "bold",
+          "color": rand_color()
+        });
+        // 随机颜色
+        function rand_color() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+        //在body添加这个标签
+        $("body").append($i);
+        //animate() 方法执行 CSS 属性集的自定义动画。
+        //该方法通过CSS样式将元素从一个状态改变为另一个状态。CSS属性值是逐渐改变的，这样就可以创建动画效果。
+        //详情请看http://www.w3school.com.cn/jquery/effect_animate.asp
+        $i.animate({
+          //将原来的位置向上移动180
+          "top": y - 180,
+          "opacity": 0
+          //1500动画的速度
+        }, 1500, function () {
+          //时间到了自动删除
+          $i.remove();
+        });
+      });
+    });
   </script>
 </th:block>
 <!--<script th:replace="_fragments :: timeScript"></script>-->

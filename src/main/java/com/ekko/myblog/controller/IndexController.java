@@ -1,10 +1,8 @@
 package com.ekko.myblog.controller;
 import com.ekko.myblog.exception.NotFoundException;
 import com.ekko.myblog.pojo.Blog;
-import com.ekko.myblog.service.BlogService;
-import com.ekko.myblog.service.TagService;
-import com.ekko.myblog.service.TypeService;
-import com.ekko.myblog.service.UserService;
+import com.ekko.myblog.pojo.Information;
+import com.ekko.myblog.service.*;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +22,10 @@ public class IndexController {
     TypeService typeService;
     @Autowired
     TagService tagService;
+
+    @Autowired
+    InformationService informationService;
+
     @GetMapping({"/index","/"})
     public String index0(){
         return "redirect:/index/1";
@@ -33,11 +35,13 @@ public class IndexController {
     UserService userService;
     @GetMapping("/index/{pageNum}")
     public String index(@PathVariable int pageNum,Model model){
+        Information information = informationService.getInformation();
         //user,
         PageInfo<Blog> pageInfo = blogService.listPulbishedBlog(pageNum);
         userService.setBlogsUser(pageInfo);
         tagService.setBlogTags(pageInfo);
         model.addAttribute("page",pageInfo);
+        model.addAttribute("information",information);
         model.addAttribute("types",typeService.listPageIndex(1));
         model.addAttribute("tags",tagService.listPageIndex(1));
         model.addAttribute("recommendBlogs",blogService.listRecom(1));

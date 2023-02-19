@@ -91,25 +91,25 @@
           <div class="field">
             <div class="ui checkbox">
               <input type="checkbox" id="recommend" name="recommend" checked="checked" class="hidden">
-              <label for="recommend"><font color="#f0ffff">推荐</font></label>
+              <label for="recommend">推荐</label>
             </div>
           </div>
           <div class="field">
             <div class="ui checkbox">
               <input type="checkbox" id="shareStatement" name="shareStatement"  class="hidden">
-              <label for="shareStatement"><font color="#f0ffff">转载声明</font></label>
+              <label for="shareStatement">转载声明</label>
             </div>
           </div>
           <div class="field">
             <div class="ui checkbox">
               <input type="checkbox" id="appreciation" name="appreciation"  class="hidden">
-              <label for="appreciation"><font color="#f0ffff">赞赏</font></label>
+              <label for="appreciation">赞赏</label>
             </div>
           </div>
           <div class="field">
             <div class="ui checkbox">
               <input type="checkbox" id="commentabled" name="commentabled" class="hidden">
-              <label for="commentabled"><font color="#f0ffff">评论</font></label>
+              <label for="commentabled">评论</label>
             </div>
           </div>
         </div>
@@ -169,19 +169,13 @@
     </div>
 
   </footer>
+  <script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
 
-
-
+  <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+  <!--/*/</th:block>/*/-->
 
   <script>
-    function setTime() {
-      var now = new Date();
-      create= now.getFullYear()+"-"+(now.getMonth()+1)+"-"+now.getDate()+"  "
-              +now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
-      document.getElementById("htmer_time").innerHTML = create;
-    }
-    setInterval(setTime, 1000);
-
 
     //初始化Markdown编辑器
     var contentEditor;

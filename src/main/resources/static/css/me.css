@@ -1,10 +1,26 @@
 
 body {
-    background: url("../images/944a742ff7634669be4db87153696e8e.jpg");
+    background: url("http://image.ekkosblog.online/blogbackground/202302191041658.png");
     background-size:cover;
     background-attachment:fixed;
     background-color:#CCCCCC;
 }
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #909;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #909;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #909;
+    opacity:  1;
+}
+::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #909;
+}
+
 
 .m-padded-mini {
     padding: 0.2em !important;
@@ -178,3 +194,25 @@ body {
         width: 100% !important;
     }
 }
+.t1 {
+    opacity: 50% !important;
+    border-radius: 20% !important;
+    text-align: center !important;
+}
+.t2 {
+    padding-top: 30px !important;
+}
+.t3 {
+    padding-bottom: 28px;
+}
+.t4 {
+    color: #ffffff !important;
+    background-color: #ee6d7c !important;
+    border-color: #ee6d7c !important;
+}
+.t5 {
+    color: #ee6d7c !important;
+    border-color: #ee6d7c !important;
+}
+
+

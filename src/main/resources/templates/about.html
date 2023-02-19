@@ -31,7 +31,7 @@
   </a>
 </nav>
 <!--中间内容-->
-  <div  class="m-container m-padded-tb-big animated fadeIn">
+  <div  class="m-container m-padded-tb-big animate__animated animate__bounceInLeft">
     <div class="ui container">
 
       <div class="ui stackable grid">
@@ -64,10 +64,27 @@
           </div>
 
           <div class="ui bottom attached segment">
-            <a href="https://github.com/Ekkoc2021" class="ui circular icon button"><i class="github icon"></i></a>
-            <a class="ui wechat circular icon button"><i class="weixin icon"></i></a>
-            <a  class="ui qq circular icon button" data-content="189890049" data-position="bottom center"><i class="qq icon"></i></a>
+            <div class="ui secondary segment" style="background-color: #ffffff;">
+              <div class="ui grid">
+                <div class="four wide column" >
+                  <a href="https://github.com/Ekkoc2021" class="ui circular icon button"><i class="github icon"></i></a>
+                </div>
+                <div class="four wide column" >
+                  <a href="https://weibo.com" class="ui weibo circular icon button"><i class="weibo icon red"></i></a>
+                </div>
+                <div class="four wide column" >
+                  <a href="#" class="ui wechat circular icon button" data-content="微信:ekkolooooo"
+                     data-position="bottom center"><i class="weixin icon green"></i></a>
+                </div>
+                <div class="four wide column" >
+                  <a href="#" class="ui qq circular icon button" data-content="QQ:189890049"
+                     data-position="bottom center"><i class="qq icon blue"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
+
+
 
           <div class="ui wechat-qr flowing popup transition hidden">
             <img src="../static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 110px" th:src="@{/images/wechat.jpg}">
@@ -126,37 +143,18 @@
     </div>
 
   </footer>
+<!--/*/<th:block th:replace="_fragments :: script">/*/-->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
   <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
+<!--/*/</th:block>/*/-->
+<script>
+  $('.menu.toggle').click(function () {
+    $('.m-item').toggleClass('m-mobile-hide');
+  });
+  $('.wechat').popup();
+  $('.qq').popup();
+</script>
 
-
-  <script>
-    function setTime() {
-      var now = new Date();
-      create= now.getFullYear()+"-"+(now.getMonth()+1)+"-"+now.getDate()+"  "
-              +now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
-      document.getElementById("htmer_time").innerHTML = create;
-    }
-    setInterval(setTime, 1000);
-
-    $('.menu.toggle').click(function () {
-      $('.m-item').toggleClass('m-mobile-hide');
-    });
-
-    $('.menu.toggle').click(function () {
-      $('.m-item').toggleClass('m-mobile-hide');
-    });
-
-    $('.wechat').popup({
-      popup : $('.wechat-qr'),
-      position: 'bottom center'
-    });
-    $('.qq').popup();
-      $('.menu.toggle').click(function () {
-      $('.m-item').toggleClass('m-mobile-hide');
-    });
-
-  </script>
 </body>
 </html>
