@@ -4,47 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c113fd4f-a9ad-405b-9e98-1ffe6838b4b9" name="Changes" comment="2/3 打印更加详细的info">
+    <list default="true" id="c113fd4f-a9ad-405b-9e98-1ffe6838b4b9" name="Changes" comment="2/19日:闲的无聊,copy别人的前端,顺便改一改归档显示的bug">
       <change afterPath="$PROJECT_DIR$/log/blog-pro.log.2023-02-16.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/Mappers/InformationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/interceptor/VisitNumInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/pojo/Information.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/InformationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/serviceImpl/InformationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ekko/myblog/Mappers/InformationMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/canvas-nest.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/mouse-click.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/snowflake.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/archivesDetail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ekko/myblog/InformationServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/blog-pro.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log.2023-01-29.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log.2023-01-30.0.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/aspect/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/ArchiveShowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/ArchiveShowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/BlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/serviceImpl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/serviceImpl/BlogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-pro.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/me.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/_fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs-input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/diary.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/diary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/inputDiary.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/inputDiary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/archives.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/archives.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/types.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +87,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../桌面文件夹/notes/chat-gpt-master(1)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -328,7 +294,9 @@
       <workItem from="1676733268228" duration="27000" />
       <workItem from="1676734097174" duration="4227000" />
       <workItem from="1676773389793" duration="25421000" />
-      <workItem from="1676806157160" duration="597000" />
+      <workItem from="1676806157160" duration="897000" />
+      <workItem from="1676807781680" duration="196000" />
+      <workItem from="1676810014095" duration="21000" />
     </task>
     <task id="LOCAL-00001" summary="blog">
       <created>1673618556433</created>
@@ -414,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676602889970</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="2/19日:闲的无聊,参考了别人的前端进行了一些改动,顺便改一改归档页面的bug">
+      <created>1676807053996</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1676807053996</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +404,9 @@
     <MESSAGE value="2/3 打印更加详细的info" />
     <MESSAGE value="解决了只要知道文章id就能查看没有发布文章的问题！" />
     <MESSAGE value="解决手机端后台页面无法打开菜单栏的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决手机端后台页面无法打开菜单栏的问题" />
+    <MESSAGE value="2/19日:闲的无聊,copy别人的前端,顺便改一改归档显示的bug" />
+    <MESSAGE value="2/19日:闲的无聊,参考了别人的前端进行了一些改动,顺便改一改归档页面的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="2/19日:闲的无聊,参考了别人的前端进行了一些改动,顺便改一改归档页面的bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

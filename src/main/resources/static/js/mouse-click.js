@@ -1,7 +1,7 @@
 class Circle {
-    constructor({ origin, speed, color, angle, context }) {
+    constructor({origin, speed, color, angle, context}) {
         this.origin = origin
-        this.position = {...this.origin }
+        this.position = {...this.origin}
         this.color = color
         this.speed = speed
         this.angle = angle
@@ -24,7 +24,7 @@ class Circle {
 }
 
 class Boom {
-    constructor({ origin, context, circleCount = 10, area }) {
+    constructor({origin, context, circleCount = 10, area}) {
         this.origin = origin
         this.context = context
         this.circleCount = circleCount
@@ -64,10 +64,10 @@ class Boom {
     move() {
         this.circles.forEach((circle, index) => {
             if (circle.position.x > this.area.width || circle.position.y > this.area.height) {
-            return this.circles.splice(index, 1)
-        }
-        circle.move()
-    })
+                return this.circles.splice(index, 1)
+            }
+            circle.move()
+        })
         if (this.circles.length == 0) {
             this.stop = true
         }
@@ -95,7 +95,7 @@ class CursorSpecialEffects {
 
     handleMouseDown(e) {
         const boom = new Boom({
-            origin: { x: e.clientX, y: e.clientY },
+            origin: {x: e.clientX, y: e.clientY},
             context: this.computerContext,
             area: {
                 width: this.globalWidth,
@@ -141,11 +141,11 @@ class CursorSpecialEffects {
 
         this.booms.forEach((boom, index) => {
             if (boom.stop) {
-            return this.booms.splice(index, 1)
-        }
-        boom.move()
-        boom.draw()
-    })
+                return this.booms.splice(index, 1)
+            }
+            boom.move()
+            boom.draw()
+        })
         this.renderContext.drawImage(this.computerCanvas, 0, 0, this.globalWidth, this.globalHeight)
     }
 }

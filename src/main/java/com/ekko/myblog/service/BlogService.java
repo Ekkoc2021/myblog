@@ -10,10 +10,13 @@ import java.util.Map;
 
 public interface BlogService {
     Blog getBlogAndConvert(Long id);
+
     Blog getPublishedBlogAndConvert(Long id);
+
     PageInfo<Blog> listPulbishedBlog(int pageNum);
 
     PageInfo<Blog> getBlogs(BlogQuery blogQuery);
+
     void addBlogs(Blog blog);
 
     Blog getBlog(Long id);
@@ -30,9 +33,9 @@ public interface BlogService {
 
     PageInfo<Blog> listBlogbByTypeId(Long id, int pagenum);
 
-    PageInfo<Blog> listBlogByTagId(Long id,int pagenum);
+    PageInfo<Blog> listBlogByTagId(Long id, int pagenum);
 
-    PageInfo<Blog> getArchivesDetail(int num,String year);
+    PageInfo<Blog> getArchivesDetail(int num, String year);
 
     PageInfo<String> getArchivesYear(int pageNum);
 

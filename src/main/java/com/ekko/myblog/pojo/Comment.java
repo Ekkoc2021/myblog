@@ -22,7 +22,7 @@ public class Comment {
     private List<Comment> replyComments = new ArrayList<>();
     //n:1
     private Comment parentComment;
-    private  Long parentCommentid;
+    private Long parentCommentid;
     private boolean adminComment;
 
 }

@@ -17,9 +17,10 @@ public class BlogTagServiceImpl implements BlogTagService {
 
     @Autowired
     private BlogTagMapper blogTagMapper;
+
     @Override
     public void addBlogTags(List<BlogTag> blogTags) {
-        for (BlogTag blogTag: blogTags) {
+        for (BlogTag blogTag : blogTags) {
             blogTagMapper.insertBlogTag(blogTag);
         }
     }

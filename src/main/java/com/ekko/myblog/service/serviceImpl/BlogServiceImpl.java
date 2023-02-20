@@ -20,14 +20,14 @@ import java.util.Map;
 public class BlogServiceImpl implements BlogService {
     @Override
     public PageInfo<Blog> getDiarys(int pageNum) {
-        PageHelper.startPage(pageNum,10);
-        List<Blog> blogList=blogMapper.selectDiary();
+        PageHelper.startPage(pageNum, 10);
+        List<Blog> blogList = blogMapper.selectDiary();
         return new PageInfo<>(blogList);
     }
 
     @Override
     public void updateBlogsTypename(String oldname, String newname) {
-        blogMapper.updateBlogsTypename(oldname,newname);
+        blogMapper.updateBlogsTypename(oldname, newname);
     }
 
     @Override
@@ -40,33 +40,33 @@ public class BlogServiceImpl implements BlogService {
      */
     @Override
     public PageInfo<String> getArchivesYear(int pageNum) {
-        PageHelper.startPage(pageNum,11);
-        List<String> years=blogMapper.selectBlogYears();
+        PageHelper.startPage(pageNum, 11);
+        List<String> years = blogMapper.selectBlogYears();
         PageInfo<String> pageInfo = new PageInfo(years);
         return pageInfo;
     }
 
     @Override
-    public PageInfo<Blog> getArchivesDetail(int num,String year) {
-        PageHelper.startPage(num,11);
+    public PageInfo<Blog> getArchivesDetail(int num, String year) {
+        PageHelper.startPage(num, 11);
         List<Blog> blogList = blogMapper.selectBlogByYear(year);
-        PageInfo<Blog> pageInfo=new PageInfo<>(blogList);
+        PageInfo<Blog> pageInfo = new PageInfo<>(blogList);
         return pageInfo;
     }
 
     @Override
-    public PageInfo<Blog> listBlogByTagId(Long id,int pagenum) {
-        PageHelper.startPage(pagenum,5);
+    public PageInfo<Blog> listBlogByTagId(Long id, int pagenum) {
+        PageHelper.startPage(pagenum, 5);
         List<Blog> blogs = blogMapper.selectBlogByTagId(id);
-        PageInfo<Blog> pageInfo=new PageInfo<>(blogs);
+        PageInfo<Blog> pageInfo = new PageInfo<>(blogs);
         return pageInfo;
     }
 
     @Override
     public PageInfo<Blog> listBlogbByTypeId(Long id, int pagenum) {
-        PageHelper.startPage(pagenum,5);
-        List<Blog> blogList=blogMapper.selectBlogByTypeId(id);
-        PageInfo<Blog> pageInfo=new PageInfo<>(blogList);
+        PageHelper.startPage(pagenum, 5);
+        List<Blog> blogList = blogMapper.selectBlogByTypeId(id);
+        PageInfo<Blog> pageInfo = new PageInfo<>(blogList);
         return pageInfo;
     }
 
@@ -76,19 +76,20 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public Blog getPublishedBlogAndConvert(Long id){
+    public Blog getPublishedBlogAndConvert(Long id) {
         Blog blog = blogMapper.selectPublishedBlogByid(id);
-        if(blog==null){
+        if (blog == null) {
             return null;
         }
         String s = MarkdownUtils.markdownToHtmlExtensions(blog.getContent());
         blog.setContent(s);
         return blog;
     }
+
     @Override
     public Blog getBlogAndConvert(Long id) {
         Blog blog = blogMapper.selectBlogByid(id);
-        if(blog==null){
+        if (blog == null) {
             return null;
         }
         String s = MarkdownUtils.markdownToHtmlExtensions(blog.getContent());
@@ -98,25 +99,25 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public PageInfo<Blog> searchBlog(String search, int pagenum) {
-        PageHelper.startPage(pagenum,5);
-        List<Blog> blogList =blogMapper.selectBlogBySearch(search);
-        PageInfo<Blog> blogPageInfo=new PageInfo<>(blogList);
+        PageHelper.startPage(pagenum, 5);
+        List<Blog> blogList = blogMapper.selectBlogBySearch(search);
+        PageInfo<Blog> blogPageInfo = new PageInfo<>(blogList);
         return blogPageInfo;
     }
 
     @Override
     public PageInfo<Blog> listRecom(int i) {
-        PageHelper.startPage(i,10);
-        List<Blog> blogs=blogMapper.selectRecom();
-        PageInfo<Blog> pageInfo =new PageInfo<>(blogs);
+        PageHelper.startPage(i, 10);
+        List<Blog> blogs = blogMapper.selectRecom();
+        PageInfo<Blog> pageInfo = new PageInfo<>(blogs);
         return pageInfo;
     }
 
     @Override
     public PageInfo<Blog> listPulbishedBlog(int pageNum) {
-        PageHelper.startPage(pageNum,7);
-        List<Blog> blogList=blogMapper.selectPulbishedBlogs();
-        PageInfo<Blog> pageInfo= new PageInfo<>(blogList);
+        PageHelper.startPage(pageNum, 7);
+        List<Blog> blogList = blogMapper.selectPulbishedBlogs();
+        PageInfo<Blog> pageInfo = new PageInfo<>(blogList);
         return pageInfo;
     }
 
@@ -143,11 +144,12 @@ public class BlogServiceImpl implements BlogService {
 
     @Autowired
     BlogMapper blogMapper;
+
     @Override
     public PageInfo<Blog> getBlogs(BlogQuery blogQuery) {
-        PageHelper.startPage(blogQuery.getPage(),10);
-        List<Blog> list=blogMapper.selectAllBlogs(blogQuery);
-        PageInfo<Blog> pageInfo=new PageInfo<>(list);
+        PageHelper.startPage(blogQuery.getPage(), 10);
+        List<Blog> list = blogMapper.selectAllBlogs(blogQuery);
+        PageInfo<Blog> pageInfo = new PageInfo<>(list);
         return pageInfo;
     }
 }

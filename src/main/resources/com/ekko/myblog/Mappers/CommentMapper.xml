@@ -5,11 +5,11 @@
 <mapper namespace="com.ekko.myblog.Mappers.CommentMapper">
     <insert id="insertComment">
         insert into comment
-            value(#{comment.id}, #{comment.nickname},
-            #{comment.email},#{comment.content},
-            #{comment.avatar}, #{comment.createTime},
+        value(#{comment.id}, #{comment.nickname},
+        #{comment.email},#{comment.content},
+        #{comment.avatar}, #{comment.createTime},
         #{comment.blogid},#{comment.parentCommentid},
-            #{comment.adminComment})
+        #{comment.adminComment})
 
     </insert>
     <select id="selectCommentByBlogid" resultType="com.ekko.myblog.pojo.Comment">

@@ -12,7 +12,7 @@ public interface CommentMapper {
 
     List<Comment> getSon(@Param("parentid") Long id);
 
-    int insertComment(@Param("comment")Comment comment);
+    int insertComment(@Param("comment") Comment comment);
 
-    Comment selectCommentById(@Param("id")long currentTimeMillis);
+    Comment selectCommentById(@Param("id") long currentTimeMillis);
 }

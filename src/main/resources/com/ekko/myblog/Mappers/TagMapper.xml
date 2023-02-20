@@ -19,6 +19,7 @@
         select tag.* from tag,blog_tag where blog_tag.blogid=#{blogid} and blog_tag.tagid=tag.id
     </select>
     <select id="selectTagAndBlogSize" resultType="com.ekko.myblog.pojo.Tag">
-        select tag.* ,count(tag.name) as blogsize from tag,blog_tag where tag.id=blog_tag.tagid group by tag.name order by blogsize desc
+        select tag.* ,count(tag.name) as blogsize from tag,blog_tag where tag.id=blog_tag.tagid group by tag.name order
+        by blogsize desc
     </select>
 </mapper>

@@ -18,33 +18,35 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/admin")
 public class LoginContraller {
     @GetMapping
-    public String loginPage(){
+    public String loginPage() {
         return "admin/login";
     }
+
     @Autowired
     UserService userService;
+
     @PostMapping("/login")
-    public String login(HttpSession session, Model model,RedirectAttributes redirectAttributes, @RequestParam String username, @RequestParam String password){
-        User user= userService.CheckUser(username,password);
-        if (user !=null ){
+    public String login(HttpSession session, Model model, RedirectAttributes redirectAttributes, @RequestParam String username, @RequestParam String password) {
+        User user = userService.CheckUser(username, password);
+        if (user != null) {
             user.setPassword(null);//页面拿到密码不安全
-            session.setAttribute("user",user);
-            model.addAttribute("username",user.getNickname());
+            session.setAttribute("user", user);
+            model.addAttribute("username", user.getNickname());
             return "admin/index";
         }
         //要用redirectAttributes实现重定向携带数据,model中返回数据后不会携带
-        redirectAttributes.addFlashAttribute("message","用户名或者密码错误");
+        redirectAttributes.addFlashAttribute("message", "用户名或者密码错误");
         return "redirect:/admin";//重定向,直接跳转会出现问题
     }
 
     //每次不小心访问/admin/login都会打印错误日志
     @GetMapping("/login")
-    public String tologin(){
+    public String tologin() {
         return "redirect:/admin";//重定向,直接跳转会出现问题
     }
 
     @GetMapping("/logout")
-    public String logout(HttpSession session){
+    public String logout(HttpSession session) {
         session.removeAttribute("user");
         return "redirect:/admin";
     }

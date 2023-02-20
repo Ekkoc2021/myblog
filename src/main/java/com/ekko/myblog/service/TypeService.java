@@ -9,12 +9,19 @@ import java.util.List;
 
 public interface TypeService {
     Type saveType(Type type);
+
     Type getType(Long id);
+
     PageInfo<Type> listPage(int pageNum);
-    Type updateType(Long id,Type type);
+
+    Type updateType(Long id, Type type);
+
     void deleteType(Long id);
+
     List<Type> listType();
+
     PageInfo<Type> listPageIndex(int i);
+
     List<Type> listShowType();
 }
 

@@ -61,19 +61,21 @@ public class TypeController {
         model.addAttribute("type", typeService.getType(id));//验证数据是否存在
         return "admin/types-input";
     }
+
     @Autowired
     BlogService blogService;
+
     @PostMapping("/types/{id}")
-    public String updatepost(@PathVariable Long id,Type type, RedirectAttributes redirectAttributes) {
+    public String updatepost(@PathVariable Long id, Type type, RedirectAttributes redirectAttributes) {
         try {
             //更新对应的博客类型名称
             Type type1 = typeService.getType(id);
-            if (type1==null){
+            if (type1 == null) {
                 throw new NotFoundException("id对应的类型不存在!");
             }
             String name = type1.getName();
-            blogService.updateBlogsTypename(name,type.getName());
-            typeService.updateType(id,type);
+            blogService.updateBlogsTypename(name, type.getName());
+            typeService.updateType(id, type);
             redirectAttributes.addFlashAttribute("message", "更新成功!");
         } catch (Exception e) {
             redirectAttributes.addFlashAttribute("message", "更新失败!分类名称重复!");
@@ -82,7 +84,7 @@ public class TypeController {
     }
 
     @GetMapping("/types/{id}/delete")
-    public String deleteType(@PathVariable("id") Long id,RedirectAttributes redirectAttributes){
+    public String deleteType(@PathVariable("id") Long id, RedirectAttributes redirectAttributes) {
         typeService.deleteType(id);
         redirectAttributes.addFlashAttribute("message", "删除成功!");
         return "redirect:/admin/types/1";

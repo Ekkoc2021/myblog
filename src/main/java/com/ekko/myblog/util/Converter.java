@@ -8,18 +8,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *用于将前端传输过来的数据转换为特定格式的工具类
- * */
+ * 用于将前端传输过来的数据转换为特定格式的工具类
+ */
 public class Converter {
     /**
-     *
      * @param ids
      * @return
      */
-    public static List<Long> TagsIdCon(String ids){
+    public static List<Long> TagsIdCon(String ids) {
         List<Long> Ids = new ArrayList<>();
         String[] split = ids.split(",");
-        for (String s:split) {
+        for (String s : split) {
             Long aLong = new Long(s);
             Ids.add(aLong);
         }
@@ -27,7 +26,6 @@ public class Converter {
     }
 
     /**
-     *
      * @param tags
      * @return
      */

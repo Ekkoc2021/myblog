@@ -8,14 +8,19 @@ import java.util.List;
 
 public interface TagService {
     void setBlogTags(PageInfo<Blog> pageInfo);
+
     //查所有
     PageInfo<Tag> allTags(int pageNum);
+
     //根据id查询
     Tag getTags(Long id);
+
     //根据id删除
     void deleteTags(Long id);
+
     //根据id修改
-    void updateTags(Long id,String name);
+    void updateTags(Long id, String name);
+
     //添加标签
     boolean addTags(Tag tag);
 

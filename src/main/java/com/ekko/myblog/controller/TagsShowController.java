@@ -26,33 +26,35 @@ public class TagsShowController {
     BlogService blogService;
     @Autowired
     UserService userService;
+
     @GetMapping("/{id}")
-    public String showTagsAndBlogs(@PathVariable Long id, Model model){
+    public String showTagsAndBlogs(@PathVariable Long id, Model model) {
         List<Tag> tags = tagService.listTagsWithBlogsize();
-        if (id==-1){
-            if(tags.size()>0) {
+        if (id == -1) {
+            if (tags.size() > 0) {
                 id = tags.get(0).getId();
-            }else{
-                throw  new NotFoundException("还没有任何博客!请联系作者更新!");
+            } else {
+                throw new NotFoundException("还没有任何博客!请联系作者更新!");
             }
         }
-        model.addAttribute("tags",tags);
-        PageInfo list=blogService.listBlogByTagId(id,1);
+        model.addAttribute("tags", tags);
+        PageInfo list = blogService.listBlogByTagId(id, 1);
         userService.setBlogsUser(list);
         tagService.setBlogTags(list);
-        model.addAttribute("page",list);
-        model.addAttribute("activeTagId",id);
+        model.addAttribute("page", list);
+        model.addAttribute("activeTagId", id);
         return "tags";
     }
+
     @GetMapping("/{id}/{pageNum}")
-    public String showTagsAndBlogsWithPageNum(@PathVariable Long id, Model model,@PathVariable int pageNum){
+    public String showTagsAndBlogsWithPageNum(@PathVariable Long id, Model model, @PathVariable int pageNum) {
         List<Tag> tags = tagService.listTagsWithBlogsize();
-        model.addAttribute("tags",tags);
-        PageInfo<Blog> list=blogService.listBlogByTagId(id,pageNum);
+        model.addAttribute("tags", tags);
+        PageInfo<Blog> list = blogService.listBlogByTagId(id, pageNum);
         userService.setBlogsUser(list);
         tagService.setBlogTags(list);
-        model.addAttribute("page",list);
-        model.addAttribute("activeTagId",id);
+        model.addAttribute("page", list);
+        model.addAttribute("activeTagId", id);
         return "tags";
     }
 }

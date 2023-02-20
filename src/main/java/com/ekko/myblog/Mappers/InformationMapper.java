@@ -8,5 +8,6 @@ import java.util.List;
 @Mapper
 public interface InformationMapper {
     void increase();
+
     List<Information> selectInfor();
 }

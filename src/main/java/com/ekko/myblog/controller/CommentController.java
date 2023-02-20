@@ -20,38 +20,39 @@ import java.util.UUID;
 public class CommentController {
     @Autowired
     CommentService commentService;
+
     @GetMapping("/comments/{blogid}")
-    public String comments(@PathVariable Long blogid, Model model){
+    public String comments(@PathVariable Long blogid, Model model) {
         //所有的根评论
         List<Comment> comments = commentService.listCommentByBlogid(blogid);
         //根据根评论,完成查询所有的子评论
         commentService.getSonComments(comments);
-        model.addAttribute("comments",comments);
+        model.addAttribute("comments", comments);
         return "blog::commentList";
     }
 
     @PostMapping("/comments")
-    public String post(Comment comment,HttpSession session){
-        Long getid=System.currentTimeMillis();
-        int t=0;
-        while (commentService.getCommentById(getid)!=null ){
+    public String post(Comment comment, HttpSession session) {
+        Long getid = System.currentTimeMillis();
+        int t = 0;
+        while (commentService.getCommentById(getid) != null) {
             t++;
-            if (t>7){
+            if (t > 7) {
                 throw new NotFoundException("请求超时!");
             }
-            getid=System.currentTimeMillis();
+            getid = System.currentTimeMillis();
         }
         comment.setId(getid);
         comment.setCreateTime(new Timestamp(getid));
-        User user = (User)session.getAttribute("user");
-        if(user !=null){
+        User user = (User) session.getAttribute("user");
+        if (user != null) {
             comment.setAdminComment(true);
             comment.setAvatar(user.getAvatar());
-        }else{
+        } else {
             comment.setAvatar("/images/userAvatar.png");
         }
         commentService.saveComment(comment);
-        return "redirect:/comments/"+comment.getBlogid();
+        return "redirect:/comments/" + comment.getBlogid();
     }
 
 }

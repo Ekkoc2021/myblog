@@ -12,6 +12,7 @@ import java.util.List;
 public class InformationServiceImpl implements InformationService {
     @Autowired
     InformationMapper informationMapper;
+
     @Override
     public void increase() {
         informationMapper.increase();
@@ -20,7 +21,7 @@ public class InformationServiceImpl implements InformationService {
     @Override
     public Information getInformation() {
         List<Information> information = informationMapper.selectInfor();
-        if (information.size()>0) {
+        if (information.size() > 0) {
             return information.get(0);
         }
         return null;

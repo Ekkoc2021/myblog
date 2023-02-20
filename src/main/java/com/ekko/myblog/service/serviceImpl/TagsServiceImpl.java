@@ -15,7 +15,7 @@ import java.util.List;
 public class TagsServiceImpl implements TagService {
     @Override
     public void setBlogTags(PageInfo<Blog> pageInfo) {
-        for (Blog b:pageInfo.getList()) {
+        for (Blog b : pageInfo.getList()) {
             b.setTags(tagMapper.selectTabsByBlogId(b.getId()));
         }
     }
@@ -27,15 +27,15 @@ public class TagsServiceImpl implements TagService {
 
     @Override
     public PageInfo<Tag> listPageIndex(int i) {
-        PageHelper.startPage(i,10);
+        PageHelper.startPage(i, 10);
         List<Tag> tags = tagMapper.selectTagAndBlogSize();
-        PageInfo<Tag> pageInfo=new PageInfo<>(tags);
+        PageInfo<Tag> pageInfo = new PageInfo<>(tags);
         return pageInfo;
     }
 
     @Override
     public List<Tag> getTagsByBlogId(Long id) {
-        List<Tag> tags=tagMapper.selectTabsByBlogId(id);
+        List<Tag> tags = tagMapper.selectTabsByBlogId(id);
         return tags;
     }
 
@@ -46,11 +46,12 @@ public class TagsServiceImpl implements TagService {
 
     @Autowired
     TagMapper tagMapper;
+
     @Override
     public PageInfo<Tag> allTags(int pageNum) {
-        PageHelper.startPage(pageNum,10);
+        PageHelper.startPage(pageNum, 10);
         List<Tag> tags = tagMapper.selectAllTag();
-        PageInfo<Tag> pageInfo=new PageInfo<>(tags);
+        PageInfo<Tag> pageInfo = new PageInfo<>(tags);
         return pageInfo;
     }
 
@@ -66,12 +67,12 @@ public class TagsServiceImpl implements TagService {
 
     @Override
     public void updateTags(Long id, String name) {
-        tagMapper.updateTag(id,name);
+        tagMapper.updateTag(id, name);
     }
 
     @Override
     public boolean addTags(Tag tag) {
-        if (tagMapper.insertTags(tag)>0){
+        if (tagMapper.insertTags(tag) > 0) {
             return true;
         }
         return false;

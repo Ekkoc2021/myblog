@@ -6,5 +6,6 @@ import org.springframework.stereotype.Service;
 
 public interface InformationService {
     void increase();
+
     Information getInformation();
 }

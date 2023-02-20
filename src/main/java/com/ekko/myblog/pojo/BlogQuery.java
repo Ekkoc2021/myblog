@@ -9,12 +9,13 @@ public class BlogQuery {
     private boolean recommend;
     private Long userid;
     private int page;
-    public void reSet(){
-        if ("".equals(typeName)){
-            typeName=null;
+
+    public void reSet() {
+        if ("".equals(typeName)) {
+            typeName = null;
         }
-        if ("".equals(title)){
-            title=null;
+        if ("".equals(title)) {
+            title = null;
         }
     }
 }

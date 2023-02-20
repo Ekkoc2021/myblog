@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 
 public interface UserService {
-    User CheckUser(String username,String password);
+    User CheckUser(String username, String password);
 
     void setBlogUser(Blog blog);
 

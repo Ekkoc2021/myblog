@@ -26,79 +26,85 @@ public class BlogController {
     TypeService typeService;
     @Autowired
     UserService userService;
+
     @GetMapping("/blog/{id}")
-    public String blogDetail(@PathVariable Long id, Model model){
+    public String blogDetail(@PathVariable Long id, Model model) {
         Blog blog = blogService.getBlogAndConvert(id);
-        if(blog==null){
+        if (blog == null) {
             throw new NotFoundException("该博客不存在!");
         }
         userService.setBlogUser(blog);
         blog.setTags(tagService.getTagsByBlogId(blog.getId()));
-        model.addAttribute("blog",blog);
+        model.addAttribute("blog", blog);
         return "admin/blog";
     }
 
     @GetMapping({"/blogs"})
-    public String myblogs(BlogQuery blogQuery, Model model, HttpSession session){
+    public String myblogs(BlogQuery blogQuery, Model model, HttpSession session) {
         blogQuery.reSet();
         blogQuery.setRecommend(true);
         Long id = ((User) session.getAttribute("user")).getId();
         blogQuery.setUserid(id);//设置查询的userid
-        if (blogQuery.getPage()<=0){
+        if (blogQuery.getPage() <= 0) {
             blogQuery.setPage(1);
         }
         //查询用户的所有结果:下一页反正走的也是search,所以调用相同的方法
         PageInfo<Blog> page2 = blogService.getBlogs(blogQuery);
         model.addAttribute("page", page2);
-        model.addAttribute("types",typeService.listType());
+        model.addAttribute("types", typeService.listType());
         return "admin/blogs";
     }
+
     @PostMapping("/blogs/search")
-    public String blogSearch(BlogQuery blogQuery , Model model, HttpSession session){
+    public String blogSearch(BlogQuery blogQuery, Model model, HttpSession session) {
         blogQuery.reSet();
-        blogQuery.setUserid(((User)session.getAttribute("user")).getId());
-        if(blogQuery.getPage()<=0){
+        blogQuery.setUserid(((User) session.getAttribute("user")).getId());
+        if (blogQuery.getPage() <= 0) {
             blogQuery.setPage(1);
         }
         PageInfo<Blog> page2 = blogService.getBlogs(blogQuery);
         model.addAttribute("page", page2);
         return "admin/blogs::blogList";
     }
+
     @Autowired
     private TagService tagService;
+
     @GetMapping("/blogs/input")
-    public String blogInput(Model model){
-        model.addAttribute("blog",new Blog());
-        model.addAttribute("types",typeService.listType());
+    public String blogInput(Model model) {
+        model.addAttribute("blog", new Blog());
+        model.addAttribute("types", typeService.listType());
         model.addAttribute("tags", tagService.listTags());
         return "admin/blogs-input";
     }
+
     @GetMapping("/blogs/{id}/input")
     @Transactional
-    public String editBlog(Model model,@PathVariable Long id,RedirectAttributes redirectAttributes){
+    public String editBlog(Model model, @PathVariable Long id, RedirectAttributes redirectAttributes) {
         //需要查询
         Blog blog = blogService.getBlog(id);
-        if (blog!=null) {
-            List<Tag> tags=tagService.getTagsByBlogId(blog.getId());
+        if (blog != null) {
+            List<Tag> tags = tagService.getTagsByBlogId(blog.getId());
             blog.setTags(tags);
-            String ids=Converter.tagsToIds(blog.getTags());
+            String ids = Converter.tagsToIds(blog.getTags());
             blog.setTagIds(ids);
             model.addAttribute("blog", blog);
             model.addAttribute("types", typeService.listType());
             model.addAttribute("tags", tagService.listTags());
             return "admin/blogs-input";
         }
-        redirectAttributes.addFlashAttribute("message","博客不存在!");
+        redirectAttributes.addFlashAttribute("message", "博客不存在!");
         return "redirect:/admin/blogs";//重定向到blogs页面
     }
 
     @Autowired
     BlogTagService blogTagService;
+
     @PostMapping("/blogs")
     @Transactional //这里是必须要用事务的,涉及了两个表的添加使用
-    public String addBlog(Blog blog, RedirectAttributes redirectAttributes, HttpSession session){
+    public String addBlog(Blog blog, RedirectAttributes redirectAttributes, HttpSession session) {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        if(blog.getId()==null) {
+        if (blog.getId() == null) {
             //由于添加和修改共用一个界面,同时使用一个表单提交的url
             //完成添加操作
             //初始化数据
@@ -125,7 +131,7 @@ public class BlogController {
                 blogTagService.addBlogTags(blogTags);
             }
             redirectAttributes.addFlashAttribute("message", "添加成功!");
-        }else{
+        } else {
             //完成更新操作:1,更新博客信息-blog,2,更新博客标签中间表信息-blog_tag
             blog.setUpdateTime(timestamp);
             blogService.editBlog(blog);
@@ -147,12 +153,12 @@ public class BlogController {
 
     @GetMapping("/blogs/{id}/delete")
     @Transactional
-    public String deleteBlog(@PathVariable("id")Long id,RedirectAttributes redirectAttributes){
+    public String deleteBlog(@PathVariable("id") Long id, RedirectAttributes redirectAttributes) {
         //删除博客
         blogService.deleteBlog(id);
         //删除博客相关标签
         blogTagService.deleteBlogTag(id);
-        redirectAttributes.addFlashAttribute("message","删除成功!");
+        redirectAttributes.addFlashAttribute("message", "删除成功!");
         return "redirect:/admin/blogs";//重定向到blogs页面
     }
 
