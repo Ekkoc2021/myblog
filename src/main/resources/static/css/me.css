@@ -1,6 +1,7 @@
 
 body {
-    background: url("http://image.ekkosblog.online/blogbackground/202302191041658.png");
+    /*/[](http://image.ekkosblog.online/blogbackground/202302232245624.jpeg)*/
+    background: url("http://image.ekkosblog.online/blogbackground/202302191036302.png");
     background-size: cover;
     background-attachment: fixed;
     background-color: #CCCCCC;
@@ -243,5 +244,4 @@ body {
     color: #ee6d7c !important;
     border-color: #ee6d7c !important;
 }
-
 

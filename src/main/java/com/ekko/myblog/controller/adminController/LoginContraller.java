@@ -25,6 +25,18 @@ public class LoginContraller {
     @Autowired
     UserService userService;
 
+    /**
+    * @description:
+    * @author yll
+    * @date 2023/3/10 19:42
+    * @param
+    *  session:
+    *  model:
+    *  redirectAttributes:
+    *  username:
+    *  password:
+    * @return java.lang.String
+    */
     @PostMapping("/login")
     public String login(HttpSession session, Model model, RedirectAttributes redirectAttributes, @RequestParam String username, @RequestParam String password) {
         User user = userService.CheckUser(username, password);

@@ -23,8 +23,7 @@ public class LogAspect {
     public void log() {
     }
 
-    @Autowired
-    InformationService informationService;
+
 
     @Before("log()")
     public void dobe(JoinPoint joinPoint) {
@@ -34,7 +33,7 @@ public class LogAspect {
          * 用redis性能会更好,每次都经过数据库
          *
          * */
-        informationService.increase();
+//
 
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
