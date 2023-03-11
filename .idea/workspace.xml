@@ -4,13 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c113fd4f-a9ad-405b-9e98-1ffe6838b4b9" name="Changes" comment="2/19日:闲的无聊,copy别人的前端,顺便改一改归档显示的bug">
-      <change afterPath="$PROJECT_DIR$/log/blog-pro.log.2023-02-16.0.gz" afterDir="false" />
+    <list default="true" id="c113fd4f-a9ad-405b-9e98-1ffe6838b4b9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_83.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/ChatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/interceptor/UserInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/service/serviceImpl/GPTService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/vo/Answer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/vo/Choices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/vo/GPTRespAnswer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/vo/Usage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/mychat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/script/jquery-1.7.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/chat.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/blog-pro.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log.2023-01-29.0.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/blog-pro.log.2023-01-30.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/myblog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/aspect/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/LoginContraller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/controller/adminController/LoginContraller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ekko/myblog/interceptor/LoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-pro.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/me.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/me.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/_fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +45,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -85,9 +111,11 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../桌面文件夹/notes/chat-gpt-master(1)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/ekko/myblog/vo" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -96,11 +124,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\idea_workspace02\myblog\src\main\java\com\ekko\myblog\vo" />
+      <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\static\script" />
       <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\templates" />
       <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\static\css" />
       <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\static\images" />
-      <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\static\js" />
-      <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\templates\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\workspace\idea_workspace02\myblog\src\main\resources\static\css" />
@@ -113,6 +141,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MyblogApplication">
+    <configuration name="GPTService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ekko.myblog.service.serviceImpl.GPTService" />
+      <module name="myblog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ekko.myblog.service.serviceImpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ekko.myblog.TestDemo" />
       <module name="myblog" />
@@ -150,22 +191,6 @@
       <option name="PACKAGE_NAME" value="com.ekko.myblog" />
       <option name="MAIN_CLASS_NAME" value="com.ekko.myblog.CommentServiceTest" />
       <option name="METHOD_NAME" value="testGETbyid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommentServiceTest.testGetSon" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="myblog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ekko.myblog.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ekko.myblog" />
-      <option name="MAIN_CLASS_NAME" value="com.ekko.myblog.CommentServiceTest" />
-      <option name="METHOD_NAME" value="testGetSon" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -209,18 +234,18 @@
     <list>
       <item itemvalue="Application.TestDemo" />
       <item itemvalue="Application.test2" />
-      <item itemvalue="JUnit.CommentServiceTest.testGetSon" />
+      <item itemvalue="Application.GPTService" />
       <item itemvalue="JUnit.CommentServiceTest.testGETbyid" />
       <item itemvalue="JUnit.InformationServiceTest.test" />
       <item itemvalue="Spring Boot.MyblogApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GPTService" />
         <item itemvalue="JUnit.InformationServiceTest.test" />
         <item itemvalue="Application.test2" />
         <item itemvalue="Application.TestDemo" />
         <item itemvalue="JUnit.CommentServiceTest.testGETbyid" />
-        <item itemvalue="JUnit.CommentServiceTest.testGetSon" />
       </list>
     </recent_temporary>
   </component>
@@ -297,6 +322,19 @@
       <workItem from="1676806157160" duration="897000" />
       <workItem from="1676807781680" duration="196000" />
       <workItem from="1676810014095" duration="21000" />
+      <workItem from="1676867888240" duration="633000" />
+      <workItem from="1676958970474" duration="84000" />
+      <workItem from="1677162653494" duration="918000" />
+      <workItem from="1677313313440" duration="407000" />
+      <workItem from="1677745431396" duration="9600000" />
+      <workItem from="1677757125475" duration="1337000" />
+      <workItem from="1677763042154" duration="792000" />
+      <workItem from="1677766206298" duration="844000" />
+      <workItem from="1677942361604" duration="874000" />
+      <workItem from="1678022354600" duration="933000" />
+      <workItem from="1678448283515" duration="5345000" />
+      <workItem from="1678492989559" duration="32000" />
+      <workItem from="1678493038664" duration="4944000" />
     </task>
     <task id="LOCAL-00001" summary="blog">
       <created>1673618556433</created>
@@ -389,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676807053996</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="v2">
+      <created>1676868436690</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676868436690</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +451,8 @@
     <MESSAGE value="解决手机端后台页面无法打开菜单栏的问题" />
     <MESSAGE value="2/19日:闲的无聊,copy别人的前端,顺便改一改归档显示的bug" />
     <MESSAGE value="2/19日:闲的无聊,参考了别人的前端进行了一些改动,顺便改一改归档页面的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="2/19日:闲的无聊,参考了别人的前端进行了一些改动,顺便改一改归档页面的bug" />
+    <MESSAGE value="v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
