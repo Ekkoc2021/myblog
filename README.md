@@ -168,7 +168,7 @@ Dockerfile
 
 ```
 FROM java:8
-MAINTAINER ekko <ekko@189890049.com>
+MAINTAINER ekko <189890049@qq.com>
 COPY ./myblog-0.0.1-SNAPSHOT.jar /temp/myblog.jar
 EXPOSE 8080
 # 设置时区
